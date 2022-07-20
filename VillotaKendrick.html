@@ -3,29 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/villotaKendrick.css">
-    <meta name="description" content="Ejemplo de HTML 5">
+    <link rel="stylesheet" href="villotaKendrick.css">
+    <meta name="description" content="Como servicios adicionales de apoyo, ofrecemos: Mantenimiento preventivos, correctivos y técnico-legal, Limpieza en zonas criticas o de alto riesgo y de zonas generales o bajo riesgo, Desratización, desinfección y desinsectación y gestión integral de residuos.">
+    <meta name="author" content="Kendrick Villota">
     <meta name="keywords" content="HTML5, CSS3, JavaScript">
-    <link rel="stylesheet" type="text/css" href="CSS/proyecto.css?1">   
-    <title>GRUPO 4 - Desinfección hospitalaria</title>
+    <link rel="stylesheet" type="text/css" href="CSS/proyecto.css?1">
+    <link rel="icon" href="imagen/grupo4.png">
+    <title> Desinfección Hospitalaria</title>
     <style>
         /*Selector de grupos o agrupado*/
         #principal,
         .inf1,
-        .titulo1,
-        #inftit1,
-        .inftit2,
         #correo,
         #titulo2,
-        .inftit3 {
+        .inftit3,
+        .inftit,
+        .inf3 {
             float: left;
+            border: 2px solid #00008B;
+            border-radius: 10px;
+        }
+
+        .inf2,
+        #titulo3,
+        .inftit4 {
+            float: right;
             background: #daf2fa;
-            border: 2px solid blue;
+            border: 2px solid #00008B;
+            border-radius: 10px;
+            margin-right: 1.5%;
         }
 
         #principal {
             width: 99.7%;
             text-align: center;
+            background: #008080;
+            color: white;
         }
 
         .clearFloat {
@@ -38,72 +51,92 @@
         #img1 {
             width: 350px;
             height: 220px;
-            margin-left: 2.2%;
-            border: 2px solid blue;
-            margin-top: 1%;
+            margin-left: 1%;
+            border: 2px solid #00008B;
+            margin-top: 2%;
             float: left;
+            border-radius: 10px;
         }
 
-        .img3,
-        .img4 {
+        .img2 {
+            float: right;
             width: 500px;
-            height: 430px;
-            margin: 1%;
-            border: 1px solid blue;
+            height: 350px;
+            margin-right: 1.5%;
+            margin-top: 1.5%;
+            border-radius: 10px;
+            border: 2px solid #00008B;
         }
 
         .img3 {
             float: right;
+            width: 500px;
+            height: 400px;
+            margin-top: 40px;
+            margin-right: 1.5%;
+            border-radius: 10px;
+            border: 2px solid #00008B;
         }
 
         .img4 {
             float: left;
+            width: 500px;
+            height: 430px;
+            margin-top: 5%;
+            margin-left: 1.5%;
+            border-radius: 10px;
+            border: 2px solid #00008B;
         }
 
         /*Diseno cuadros de informacion*/
 
-        .inf2,
         .inf1 {
+            background: #daf2fa;
             width: 350px;
             height: 195px;
-            margin-top: 1%;
+            margin-top: 2%;
+            margin-left: 1.5%;
             padding: 1%;
+            border-radius: 10px;
         }
 
         .inf2 {
-            float: right;
-            background: #daf2fa;
-            border: 2px solid blue;
+            width: 350px;
+            height: 195px;
+            margin-top: 2%;
+            padding: 1%;
         }
 
 
         .inf3 {
+            background: #daf2fa;
             width: 29%;
             margin-left: 1.5%;
-            background: #daf2fa;
-            border: 2px solid blue;
             margin-top: 1%;
-            float: left;
             padding: 1%;
         }
 
         /*Diseno Titulos*/
 
         .titulo1 {
-            width: 47%;
+            float: left;
+            background: #008080;
+            border: 2px solid #00008B;
+            color: white;
+            border-radius: 10px;
+            width: 47.3%;
             text-align: center;
-            align-items: center;
-            height: 120px;
-            justify-content: center;
-            display: flex;
+            height: 30px;
             margin-left: 1.5%;
+            margin-top: 0.1%;
+            font-size: 22px;
         }
 
         #titulo2 {
-            width: 52.5%;
+            background: #008080;
+            color: white;
+            width: 47%;
             height: 40px;
-            background: #daf2fa;
-            border: 2px solid blue;
             float: left;
             margin-top: 1.5%;
             text-align: center;
@@ -111,89 +144,170 @@
         }
 
         #titulo3 {
-            width: 52.5%;
+            background: #008080;
+            color: white;
+            width: 47%;
             height: 40px;
-            background: #daf2fa;
-            border: 2px solid blue;
-            float: right;
-            margin-top: 1.5%;
+            margin-top: 5%;
             text-align: center;
             margin-left: 1.5%;
         }
 
+        #titulo4 {
+            background: #008080;
+            color: white;
+            border: 2px solid #00008B;
+            border-radius: 10px;
+            padding: 1%;
+            margin-left: 1.5%;
+            margin-right: 1.5%;
+            text-align: center;
+
+        }
+
         /*Diseno Informacion debajo de titulos*/
 
-        #inftit1,
-        .inftit2 {
-            width: 530px;
-            height: 99px;
-            margin-left: 2%;
-            padding: 1%;
-            margin-top: 1.6%;
-        }
-
-        .inftit3,
-        .inftit4 {
-            width: 50%;
-            height: 50%;
-            margin-left: 2%;
-            padding: 1%;
-            margin-top: 1.6%;
+        .inftit {
             background: #daf2fa;
+            width: 45%;
+            height: 99px;
+            padding: 1%;
+            margin-top: 0.1%;
+            margin-left: 1.5%;
         }
 
-        ol, .inf2 ul, .inftit2 ul{
-            padding: 15px;
+        .inftit3 {
+            background: #daf2fa;
+            width: 45%;
+            height: 47%;
+            margin-left: 1.5%;
+            padding: 1%;
+            margin-top: 1.6%;
+
         }
 
         .inftit4 {
-            float: right;
-            border: 2px solid blue;
+            width: 45%;
+            height: 47%;
+            padding: 1%;
+            margin-top: 1.5%;
         }
 
         /*De mas*/
         .video {
             margin-left: auto;
             margin-right: auto;
+            margin-top: 2%;
             display: block
         }
 
         #correo {
-            padding: 0.5%;
-            margin-top: 10px;
+            background: #daf2fa;
+            padding: 1%;
+            margin-top: 1.5%;
             margin-bottom: 10px;
-            margin-left: 375px;
-            width: 34.5%;
+            margin-left: 32.8%;
+            width: 32.3%;
+        }
+
+        /*Estilo del Js*/
+        .box-content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        aside ul, article ol{
+            padding: 10px;
+        }
+
+        .box-content h2 { 
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            background-color: #daf2fa;
+            color: black;
+            border-radius: 10px;
+            border: 2px solid #00008B;
+        }
+
+        .box {
+            margin-bottom: 5px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .titulo {
+            background-color: #008080;
+            border-radius: 10px;
+            padding: 15px;
+            border: 2px solid #00008B;
+        }
+
+        .parra {
+            background-color: #daf2fa;
+            border-radius: 10px;
+
+        }
+
+        .box span {
+            color: #daf2fa;
+            padding: 15px;
+        }
+
+        .box span:hover {
+            cursor: pointer;
+            color: #daf2fa;
+            font-weight: bold;
+        }
+
+
+        .box p {
+
+            padding: 15px;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="contenedor">
+    <div class="contenedor"  >
         <header>
                 <div class="encabezado-logo-titulo">
                     <div class="encabezado-ls">
                         <img src="imagen/grupo4.png" alt="logo" width="120" height="110">
                     </div>
-                    <div class="encabezado-ls">
+                    <div class="encabezado-ls2">
                         <h1 style="text-align: right;font-size: 50px;padding: 30px 40px;">SERVICIOS DE LIMPIEZA</h1>
                     </div>
                 </div>            
                 <nav>
                     <ul class="lista-ls">
                         <li><a href="presentacion.html">Inicio</a></li>
-                        <li><a href="VeraRuben.html">Limpieza en alturas</a></li>
-                        <li><a href="CañarteIsabel.html">Clean express</a></li>
-                        <li><a href="VillotaKendrick.html">Desinfección hospitalaria</a></li>
-                        <li><a href="SanchezAndy.html">Clean working</a></li>
-                        <li><a href="SellanLuis.html">Limpieza inteligente institucional</a></li>                    
+                        <li><a href="#">Servicios</a>
+                            <ul class="lista-ls2">
+                                <li><a href="VeraRuben.html">Limpieza en alturas</a></li>
+                                <li><a href="CañarteIsabel.html">Clean express</a></li>
+                                <li><a href="VillotaKendrick.html">Desinfección hospitalaria</a></li>
+                                <li><a href="SanchezAndy.html">Clean working</a></li>
+                                <li><a href="SellanLuis.html">Limpieza inteligente institucional</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="formularios/solititudservicios.html">Solicitud de Servicios</a></li>
+                        <li><a href="formularios/reclamo.html">Reclamo</a></li>
+                        <li><a href="formularios/contratamos.html">Trabaja con nosotros</a></li>
+                        <li><a href="formularios/comentarios.html">Comentarios</a></li>
+                        <li><a href="formularios/contactanos.html">Contáctanos</a></li>                    
                     </ul>
                 </nav>           
             </header>
         <main id="principal">
             <section>
-                <h2>Desinfección Hospitalaria</h2>
+                <h2 style="text-align: center; background:#19286A; color: white;">Desinfección Hospitalaria</h2>
             </section>
 
         </main>
@@ -219,21 +333,40 @@
         <div class="clearFloat"></div>
 
         <div>
-            <h2 class="titulo1">STERISAFE</h2>
-            <p id="inftit1">STERISAFE es una unidad móvil con tecnología FDDC para la desinfección total de habitaciones
+            <h2 style="text-align: center; background:#19286A; color: white;" id="titulo4">Nueva Tecnología para descontaminación</h2>
+        </div>
+
+        <div class="clearFloat"></div>
+        <div>
+            <img class="img2" src="imagen/imgHospital2.jpg" alt="STERISAFE">
+        </div>
+
+        <div>
+            <h2 class="titulo1" >STERISAFE</h2> <br><br><br>
+
+            <!--    <div class="clearFloat"></div> -->
+
+            <p class="inftit" style="font-size: 16px; text-align:center;">STERISAFE es una unidad móvil con
+                tecnología
+                FDDC para la
+                desinfección total de
+                habitaciones
                 y edificios
                 contaminados con virus, bacterias, hongos y esporas.
 
                 Basada en un sistema automatizado aerotransportado. La tecnología STERISAFE ™ garantiza tasas de
                 reducción de 4 log a 7 log en la garantía de esterilidad.</p>
-        </div>
+        </div><br><br><br><br><br><br><br><br>
 
-        <div class="clearFloat"></div>
+        <!-- <div class="clearFloat"></div> -->
 
         <div>
             <h2 class="titulo1">Tecnología del Futuro</h2>
         </div>
-        <aside class="inftit2">
+        <br><br><br>
+        <!-- <div class="clearFloat"></div> -->
+
+        <aside class="inftit">
             <ul>
                 <li>Distribución de gas de biocida en toda la sala, sin zonas de sombra.</li>
                 <li>Sistema robotizado y monitoreado.</li>
@@ -241,25 +374,26 @@
                 <li>Sistema patentado y con bajo costo de funcionamiento.</li>
             </ul>
         </aside>
-         <br>
+
+        <div class="clearFloat"></div>
+
         <div>
             <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/JfB1lLhgz-E" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <hr>
-        <br>
+
         <div class="clearFloat"></div>
 
         <div id="titulo2">
             <h4 style="font-size: 15px;">SERVICIOS EXTRA HOSPITALARIOS</h4>
         </div>
 
-        <div class="img3">
+        <div>
             <img class="img3" src="imagen/imgHospital3.jpg" alt="camilla">
         </div>
 
-        <section>
+        <div>
             <article class="inftit3">
-
+                <h3>Se clasifican en:</h3>
                 <ol>
                     <li class="subtema">Atención sanitaria a domicilio.
                         <ol TYPE="i">
@@ -294,7 +428,7 @@
                 </ol>
 
             </article>
-        </section>
+        </div>
 
         <!-- Aqui viene la segunda parte de la info e imagen-->
 
@@ -302,13 +436,14 @@
             <h4 style="font-size: 15px;">SERVICIOS DE DIRECCIÓN Y ADMINISTRACIÓN</h4>
         </div>
 
-        <div class="img4">
+        <div>
             <img class="img4" src="imagen/imgHospital4.jpg" alt="Atencion al cliente">
         </div>
 
-        <section>
+        <div>
+            
             <article class="inftit4">
-
+                <h3>Se clasifican en:</h3>
                 <ol>
                     <li class="subtema">Administración.
                         <ol TYPE="i">
@@ -342,7 +477,44 @@
                 </ol>
 
             </article>
-        </section>
+        </div>
+
+        <div class="clearFloat"></div>
+
+        <div class="box-content">
+            <h2>SERVICIOS ADICIONALES</h2>
+
+            <div class="box">
+                <div class="titulo">
+                    <span class="span" id="t1">SERVICIOS DE APOYO</span>
+                </div>
+                <div class="parra">
+
+                </div>
+
+            </div>
+
+            <div class="box">
+                <div class="titulo">
+                    <span class="span" id="t2">SERVICIOS CENTRALES CLÍNICOS</span>
+                </div>
+                <div class="parra">
+
+                </div>
+
+            </div>
+
+            <div class="box">
+                <div class="titulo">
+                    <span class="span" id="t3">SERVICIOS ASISTENCIALES</span>
+                </div>
+                <div class="parra">
+
+                </div>
+
+            </div>
+
+        </div>
 
         <div class="clearFloat"></div>
 
@@ -377,16 +549,80 @@
         </blockquote>
 
         <footer>
-            <p>Servicios de limpieza a nivel regional. <br> Clickea en las imagenes para seguirme en mis redes sociales.
-            </p>
-            <a title="Instagram" href="https://www.instagram.com/rubasaecuador/"> <img src="imagen/Logo-Ig.png" alt="Instagram"
-                    width="50" height="50"></a>
-            <a href="https://www.facebook.com/Rubasalatam/"><img src="imagen/Logo-fb.png" alt="Facebook" width="50"
-                    height="50"></a>
+            <div id="pie">
+            <p><em style="color: white;">Villota Kendrick</em></p>
+            <a href="mailton:villota.kendrick@ug.edu.ec" style="color: #FFFFFF;">villota.kendrick@ug.edu.ec</a><br>                                   
+            <p style="color: #FFFFFF;">Copyright &copy; 2022-2023 </p>
+            </div>
         </footer>
 
     </div>
 
+    <script>
+        var temas = document.querySelectorAll(".span");
+        var temasC = document.querySelectorAll(".span-creado");
+        for (let i = 0; i < temas.length; i++) {
+            temas[i].addEventListener("click", crear);
+        }
+
+        function crear(e) {
+            eliminarEventos(temas, crear);
+            var span = e.target;
+            var padre = span.parentNode.parentNode;
+            var id = span.id;
+
+            var contenido;
+
+            if (id === "t1") {
+                contenido = "Como servicios adicionales de apoyo, ofrecemos: Mantenimiento preventivos, correctivos y técnico-legal, Limpieza en zonas criticas o de alto riesgo y de zonas generales o bajo riesgo, Desratización, desinfección y desinsectación y gestión integral de residuos.";
+            } else if (id === "t2") {
+                contenido = "Otros servicios centrales clínicos que ofrecemos son: Gestión de agenda y lista de espera en los laboratorios, organización y gestión del almacén de farmacia y gestión integral del servicio de esterilización.";
+            } else if (id === "t3") {
+                contenido = "Por ultimo tenemos servicios asistenciales adicionales como: Bloques quirúrgicos, bloques maternos e infantil, servicios de enfermeros y urgencias, UCI y rehabilitación.";
+            }
+
+            span.className = "span-creado";
+            parrafo = document.createElement("p");
+            parrafo.textContent = contenido;
+
+            padre.children[1].appendChild(parrafo);
+
+            temas = document.querySelectorAll(".span");
+            temasC = document.querySelectorAll(".span-creado");
+            agregarEventos(temas, crear);
+            agregarEventos(temasC, borrar);
+
+        }
+
+        function borrar(e) {
+            eliminarEventos(temasC, borrar);
+            var span = e.target;
+            var padre = span.parentNode.parentNode;
+
+            var parrafocreado = padre.children[1].children[0];
+
+            span.className = "span";
+            parrafocreado.remove();
+
+            temasC = document.querySelectorAll(".span-creado");
+            temas = document.querySelectorAll(".span");
+
+            agregarEventos(temasC, borrar);
+            agregarEventos(temas, crear);
+        }
+
+        function eliminarEventos(elemento, evento) {
+            for (let i = 0; i < elemento.length; i++) {
+                elemento[i].removeEventListener("click", evento);
+            }
+        }
+
+        function agregarEventos(elemento, evento) {
+            for (let i = 0; i < elemento.length; i++) {
+                elemento[i].addEventListener("click", evento);
+            }
+        }	
+    </script>
 </body>
 
 </html>
