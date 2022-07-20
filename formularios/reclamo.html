@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Grupo-04</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es un formulario de reclamos que serán tomados como revisión, es decir que se le hará seguimiento al lo que se especifics.">
+	<meta name="author" content="Andy Sánchez Paiva">
+    <link rel="stylesheet" type="text/css" href="../CSS/proyecto.css?1">
+    <style>
+        #h1-1 {
+            color: #4F94F1;
+            text-align: center;
+        }
+
+        .ima-carrusel {
+            margin: 10px;
+
+        }
+
+        .tit {
+            padding: 15px;
+            background: #3b6d77;
+            text-decoration: none;
+            color: white;
+            margin-left: 5px;
+            margin-right: 5px
+        }
+
+        .tit:hover {
+            background: #2a4a55;
+            color: white;
+        }
+
+        .encabezado-ls2 {
+            margin-bottom: 30px;
+        }
+
+        form {
+            box-shadow: 0 0 10px black;
+            background: white;
+            padding: 10px;
+            width: 300px;
+            margin: 0 auto;
+            border-radius: 3px;
+            font-size: 16px;
+            color: black;
+        }
+
+        input,
+        textarea {
+            outline: none;
+            border: 4px;
+        }
+
+        .field {
+            border: solid 1px #999;
+            padding: 10px;
+            width: 250px;
+        }
+
+        .field:focus {
+            border-color: #E98214;
+        }
+
+        input#boton {
+            padding: 5px 50px;
+            color: white;
+            font-size: 1em;
+            background-color: #1E1C1B;
+            border: 0px;
+            font-size: 18px;
+            font-family: Verdana;
+        }
+
+        input#boton:hover {
+            background-color: #4F4541;
+        }
+
+        .contactanos {
+            width: 60%;
+            
+        }
+        .servicio{
+                
+                box-shadow: 0 0 15px black;
+                width: 90%;
+                margin: auto;
+                text-align: center;
+                background: #E2E3D2;                
+                padding-bottom: 20px;
+                padding-top: 20px;                
+            }        
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="encabezado-logo-titulo">
+                <div class="encabezado-ls">
+                    <img src="../imagen/grupo4.png" alt="logo" width="120" height="110">
+                </div>
+                <div class="encabezado-ls2">
+                <h1 style="text-align: right;font-size: 50px;padding: 30px 40px;">SERVICIOS DE LIMPIEZA</h1>
+                </div>
+            </div>            
+            <nav>
+                <ul class="lista-ls">
+                    <li><a href="../presentacion.html">Inicio</a></li>
+                    <li><a href="#">Servicios</a>
+                        <ul class="lista-ls2">
+                            <li><a href="../VeraRuben.html">Limpieza en alturas</a></li>
+                            <li><a href="../CañarteIsabel.html">Clean express</a></li>
+                            <li><a href="../VillotaKendrick.html">Desinfección hospitalaria</a></li>
+                            <li><a href="../SanchezAndy.html">Clean working</a></li>
+                            <li><a href="../SellanLuis.html">Limpieza inteligente institucional</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="solititudservicios.html">Solicitud de Servicios</a></li>
+                    <li><a href="reclamo.html">Reclamo</a></li>
+                    <li><a href="contratamos.html">Trabaja con nosotros</a></li>
+                    <li><a href="comentarios.html">Comentarios</a></li>
+                    <li><a href="contactanos.html">Contáctanos</a></li>                    
+                </ul>
+            </nav>           
+        </header><br>
+        <br><br>
+
+        <div class="servicio" style="display:flex;">
+            <div class="contactanos">
+                <h3>Formulario de Reclamos</h3>
+                <p style="font-size:12px">Los campos marcados con * son obligatorios</p>
+                <div>
+                    <form id="formContacto" onsubmit="return validar()">
+                        <p>Apellidos y Nombres*
+                            <input type="text" name="Nombres y Apellidos" id="comentariopositivo" class="field"><br>
+                        </p>
+
+                        <p>Asunto del reclamo*
+                            <input type="text" name="Asunto" id="comentarionegativo" class="field"><br>
+                        </p>
+
+                        <div>
+                            <label>¿Que tipo de reclamo quiere hacer?:</label><br>
+                            Mala Limpieza <input type="checkbox" name="suscripcion" value="1" id="suscripcion"
+                                class="formItem sus" /><br>
+                            Romper cosas <input type="checkbox" name="suscripcion" value="2" id="suscripcion1"
+                                class="formItem sus" /><br>
+                            Falta de Limpieza <input type="checkbox" name="suscripcion" value="3" id="suscripcion2"
+                                class="formItem sus" /><br>
+                            Perdida de cosas (Robo) <input type="checkbox" name="suscripcion" value="4" id="suscripcion3"
+                                class="formItem sus" /><br>
+                            Otro <input type="checkbox" name="suscripcion" value="4" id="suscripcion4"
+                                class="formItem sus" /><br>
+                        </div><br>
+                        <label>Reseña del Reclamo:</label>
+                        <div>
+
+                            <textarea class="form-control formItem" id="texto" rows="5" cols="35"></textarea>
+                        </div>
+                        <br>
+                        <input type="submit" value="ENVIAR" id="boton">
+                        <p class="warnings" id="warnings"></p>
+                    </form>
+                </div>
+            </div>
+            <div class="imagen-reclamo">
+                <br><br>
+                <img src="../imagen/reclamar.jpg" style="width: 350px;height: 350px;" alt="">
+            </div>
+        </div>
+        <br><br><br><br>
+        <script>
+
+            function validar() {
+                var resultado = true;
+                var txtCompos = document.getElementById("comentariopositivo");
+                var txtComneg = document.getElementById("comentarionegativo");
+                var checkboxsSuscripcion = document.querySelectorAll(".sus");
+
+                var letra = /^[a-z ,.'-]+$/i;// letrasyespacio   ///^[A-Z]+$/i;// solo letras
+                var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                var telefonoreg = /^[0-9]{10}$/g; // para validar datos que deban tener 10 numeros
+
+                limpiarMensajes();
+
+                //validacion para nombres
+                if (txtCompos.value === '') {
+                    resultado = false;
+                    mensaje("Los Nombres y Apellidos son necesarios", txtCompos);
+                } else if (!letra.test(txtCompos.value)) {
+                    resultado = false;
+                    mensaje("Los Nombres y Apellidos solo debe contener letras", txtCompos);
+                } else if (txtCompos.value.length > 100) {
+                    resultado = false;
+                    mensaje("La casilla cuenta maximo de 100 caracteres", txtCompos);
+                }
+
+                if (txtComneg.value === '') {
+                    resultado = false;
+                    mensaje("El asunto es necesario", txtComneg);
+                } else if (!letra.test(txtComneg.value)) {
+                    resultado = false;
+                    mensaje("El asunto solo debe contener letras", txtComneg);
+                } else if (txtComneg.value.length > 50) {
+                    resultado = false;
+                    mensaje("El asunto es de maximo 50 caracteres", txtComneg);
+                }
+
+                sel = false;
+                for (let i = 0; i < checkboxsSuscripcion.length; i++) {
+                    if (checkboxsSuscripcion[i].checked) {
+                        sel = true;
+                        if (checkboxsSuscripcion[i].value === '2') {
+                            alert("Ha seleccionado el segundo checkbox");
+                        }
+                        break;
+                    }
+                }
+                if (!sel) {
+                    resultado = false;
+                    mensaje("Debe seleccionar al menos 1 reclamo", checkboxsSuscripcion[0]);
+                }
+
+                return resultado;
+            }
+
+            function mensaje(cadenaMensaje, elemento) {
+                elemento.focus();
+                var nodoPadre = elemento.parentNode;
+                var nodoMensaje = document.createElement("span");
+                nodoMensaje.innerHTML = cadenaMensaje;
+                nodoMensaje.style.color = "blue";
+                nodoMensaje.display = "block";
+                nodoMensaje.setAttribute("class", "mensaje");
+
+                nodoPadre.appendChild(nodoMensaje);
+
+            }
+
+            function limpiarMensajes() {
+                var mensajes = document.querySelectorAll(".mensaje");
+                for (let i = 0; i < mensajes.length; i++) {
+                    mensajes[i].remove();// remueve o elimina un elemento de mi doc html
+                }
+            }
+        </script>
+        
+        
+        <footer>
+            <div id="pie">
+                <address style="font-size: 15px; color: #FFFFFF;">
+                    <a href="mailton:andy.sanchezp@ug.edu.ec" style="color: #FFFFFF;">andy.sanchezp@ug.edu.ec</a>
+                    <p>Guayaquil, EC</p>
+                </address>
+                <p style="color: #FFFFFF;">Copyright &copy; 2022-2023 </p>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

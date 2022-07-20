@@ -1,0 +1,74 @@
+
+.obligatorio{
+	color: red;
+	font-size:14px;		
+}
+.titulo-form{
+	color: white;
+	background: #192846;
+	border: solid 1px white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+	margin: auto;
+	width: 50%;	
+}
+h1{
+	padding: 3px;
+	text-align: center;
+}
+.formulario{
+	display: flex;
+	margin: auto;
+	width: 80%;
+	background: #fff;
+	padding: 20px;
+	box-shadow: 0 0 15px black;
+}
+
+label,input,textarea,{
+	font-size:16px;	
+	width:100%
+}
+option,select{
+	font-size:16px;
+}
+input, textarea{
+	
+	width:100%;
+	padding:10px;	
+	box-sizing: border-box;
+}
+.botones input{
+	background: black;
+	color: white;
+	width:30%;
+	margin: auto;
+}
+.botones{
+	display: flex;
+	padding: 20px;
+}
+.botones input:hover{
+	background: #aaa;
+	color: black;
+}
+.Nombres{
+	display: flex;	
+}
+.check{
+	display: block;
+}
+
+.Nombres label, .check input{
+	width:30%;	
+	padding:10px;	
+}
+.Nombres-obligatorio{
+	display: flex;
+	
+	padding:10px;	
+}
+
+
+
+

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="villotaKendrick.css">
+    <meta name="description" content="Ejemplo de HTML 5">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <title> Float</title>
+    <style>
+        /*Selector de grupos o agrupado*/
+        #principal,
+        .inf1,
+        .titulo1,
+        #inftit1,
+        .inftit2,
+        #correo,
+        #titulo2,
+        .inftit3 {
+            float: left;
+            background: #daf2fa;
+            border: 2px solid red;
+        }
+
+        #principal {
+            width: 99.7%;
+            text-align: center;
+        }
+
+        .clearFloat {
+            clear: both;
+            margin: 0;
+        }
+
+        /*Diseno de imagenes*/
+
+        #img1 {
+            width: 350px;
+            height: 220px;
+            margin-left: 2.2%;
+            border: 2px solid red;
+            margin-top: 1%;
+            float: left;
+        }
+
+        .img3,
+        .img4 {
+            width: 500px;
+            height: 430px;
+            margin: 1%;
+            border: 1px solid red;
+        }
+
+        .img3 {
+            float: right;
+        }
+
+        .img4 {
+            float: left;
+        }
+
+        /*Diseno cuadros de informacion*/
+
+        .inf2,
+        .inf1 {
+            width: 350px;
+            height: 195px;
+            margin-top: 1%;
+            padding: 1%;
+        }
+
+        .inf2 {
+            float: right;
+            background: #daf2fa;
+            border: 2px solid red;
+        }
+
+
+        .inf3 {
+            width: 29%;
+            margin-left: 1.5%;
+            background: #daf2fa;
+            border: 2px solid red;
+            margin-top: 1%;
+            float: left;
+            padding: 1%;
+        }
+
+        /*Diseno Titulos*/
+
+        .titulo1 {
+            width: 47%;
+            text-align: center;
+            align-items: center;
+            height: 120px;
+            justify-content: center;
+            display: flex;
+            margin-left: 1.5%;
+        }
+
+        #titulo2 {
+            width: 52.5%;
+            height: 40px;
+            background: #daf2fa;
+            border: 2px solid red;
+            float: left;
+            margin-top: 1.5%;
+            text-align: center;
+            margin-left: 1.5%;
+        }
+
+        #titulo3 {
+            width: 52.5%;
+            height: 40px;
+            background: #daf2fa;
+            border: 2px solid red;
+            float: right;
+            margin-top: 1.5%;
+            text-align: center;
+            margin-left: 1.5%;
+        }
+
+        /*Diseno Informacion debajo de titulos*/
+
+        #inftit1,
+        .inftit2 {
+            width: 530px;
+            height: 99px;
+            margin-left: 2%;
+            padding: 1%;
+            margin-top: 1.6%;
+        }
+
+        .inftit3,
+        .inftit4 {
+            width: 50%;
+            height: 50%;
+            margin-left: 2%;
+            padding: 1%;
+            margin-top: 1.6%;
+            background: #daf2fa;
+        }
+
+        .inftit4 {
+            float: right;
+            border: 2px solid red;
+        }
+
+        /*De mas*/
+        .video {
+            margin-left: auto;
+            margin-right: auto;
+            display: block
+        }
+
+        #correo {
+            padding: 0.5%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 375px;
+            width: 34.5%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contenedorPrincipal">
+        <main id="principal">
+            <section>
+                <h2>Desinfección Hospitalaria</h2>
+            </section>
+
+        </main>
+
+        <aside class="inf1" style="font-size: 19px;">
+            <p>Nos especializamos en realizar trabajos de limpieza y desinfección hospitalaria con la última tecnología
+                robótica para así garantizar a nuestros clientes los estándares de calidad necesarios para el cuidado de
+                la salud de sus pacientes.</p>
+        </aside>
+
+        <img id="img1" src="imgHospital.jpg" alt="limpieza">
+
+        <aside class="inf2">
+            <p>Nuestros servicios:</p>
+            <ul>
+                <li>Limpieza y desinfección con tecnología robótica.</li>
+                <li>Desinfección de habitaciones y edificios contaminados de virus, bacterias, hongos y esporas.</li>
+                <li>Auxiliares de ayuda para el establecimiento.</li>
+                <li>Lavado y descontaminación de uniformes médicos.</li>
+            </ul>
+        </aside>
+
+        <div class="clearFloat"></div>
+
+        <div>
+            <h2 class="titulo1">STERISAFE</h2>
+            <p id="inftit1">STERISAFE es una unidad móvil con tecnología FDDC para la desinfección total de habitaciones
+                y edificios
+                contaminados con virus, bacterias, hongos y esporas.
+
+                Basada en un sistema automatizado aerotransportado. La tecnología STERISAFE ™ garantiza tasas de
+                reducción de 4 log a 7 log en la garantía de esterilidad.</p>
+        </div>
+
+        <div class="clearFloat"></div>
+
+        <div>
+            <h2 class="titulo1">Tecnología del Futuro</h2>
+        </div>
+        <aside class="inftit2">
+            <ul>
+                <li>Distribución de gas de biocida en toda la sala, sin zonas de sombra.</li>
+                <li>Sistema robotizado y monitoreado.</li>
+                <li>Seguro para operadores y pacientes.</li>
+                <li>Sistema patentado y con bajo costo de funcionamiento.</li>
+            </ul>
+        </aside>
+
+        <div>
+            <iframe class="video" title="vimeo-player" src="https://player.vimeo.com/video/710792041?h=987a68a5a7"
+                width="640" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="clearFloat"></div>
+
+        <div id="titulo2">
+            <h4 style="font-size: 15px;">SERVICIOS EXTRA HOSPITALARIOS</h4>
+        </div>
+
+        <div class="img3">
+            <img class="img3" src="imgHospital3.jpg" alt="camilla">
+        </div>
+
+        <section>
+            <article class="inftit3">
+
+                <ol>
+                    <li class="subtema">Atención sanitaria a domicilio.
+                        <ol TYPE="i">
+                            <li>Atención médica en domicilio en coordinación con el hospital.</li>
+                            <li>Atención médica preventiva.</li>
+                            <li>Atención integral de enfermos crónicos.</li>
+                        </ol>
+                    </li>
+                    <li class="subtema">Urgencias sanitarias.
+                        <ol TYPE="i">
+                            <li>Transporte sanitario urgente medicalizado.</li>
+                            <li>Organización y gestión del servicio de urgencias domiciliarias.</li>
+                        </ol>
+                    </li>
+                    <li class="subtema">Formación, educación, ocio y tiempo libre.
+                        <ol TYPE="i">
+                            <li>Aulas hospitalarias (gestión y coordinación de materias educativas, selección y
+                                contratación
+                                del
+                                profesorado, ludotecas, apoyo familiar en actividades complementarias).</li>
+                            <li>Escuela de padres.</li>
+                            <li>Grupos de mutua ayuda.</li>
+                        </ol>
+                    </li>
+                    <li class="subtema">Consultas externas.
+                        <ol TYPE="i">
+                            <li>Gestión de lista de espera.</li>
+                            <li>Gestión de citas. </li>
+                            <li>Gestión de informes y pruebas complementarias.</li>
+                        </ol>
+                    </li>
+                </ol>
+
+            </article>
+        </section>
+
+        <!-- Aqui viene la segunda parte de la info e imagen-->
+
+        <div id="titulo3">
+            <h4 style="font-size: 15px;">SERVICIOS DE DIRECCIÓN Y ADMINISTRACIÓN</h4>
+        </div>
+
+        <div class="img4">
+            <img class="img4" src="imgHospital4.jpg" alt="Atencion al cliente">
+        </div>
+
+        <section>
+            <article class="inftit4">
+
+                <ol>
+                    <li class="subtema">Administración.
+                        <ol TYPE="i">
+                            <li>Cita previa y admisión.</li>
+                            <li>Información personal a pacientes y familiares. </li>
+                            <li>Call Center. Outsourcing de admon. y “back office” hospitalario. </li>
+                        </ol>
+                    </li>
+                    <li class="subtema">Gestión archivo: historias clínicas
+                        <ol TYPE="i">
+                            <li>Definición de archivo activo y pasivo.</li>
+                            <li>Traslado de exitus al archivo pasivo.</li>
+                            <li> Unificación e integración de duplicados de historias clínicas. </li>
+                        </ol>
+                    </li>
+                    <li class="subtema">Logística y compras
+                        <ol TYPE="i">
+                            <li>Recepción, revisión, ubicación, etiquetado y distribución de mercancía.</li>
+                            <li>Instalación y mantenimiento de un sistema informático de gestión de almacenes. </li>
+                            <li>Distribución de la mercancía solicitada por los distintos departamentos del hospital.
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="subtema">Gestión de celadores
+                        <ol TYPE="i">
+                            <li>Acompañamiento de enfermos a consultas.</li>
+                            <li>Gestión de documentación entre departamentos o consultas. </li>
+                            <li>Envío a laboratorios de los correspondientes análisis urgentes.</li>
+                        </ol>
+                    </li>
+                </ol>
+
+            </article>
+        </section>
+
+        <div class="clearFloat"></div>
+
+        <div class="inf3">
+            <h4>Oficinas en Panama</h4>
+            <p>Costa del Este Ph Financial Park Av. Boulevard Costa del Este Oficina 11-1C</p>
+        </div>
+
+        <div class="inf3">
+            <h4>Oficinas en Guayaquil</h4>
+            <p>Portete 2905 entre Guerrero Valenzuela y Gallegos Lara, Guayaquil 090301</p>
+        </div>
+
+        <div class="inf3">
+            <h4>Oficinas en Argentina</h4>
+            <p>Avenida Diaz Velez 5044 .Capital Federal.Argentina<br> Telf: (+507) 3956472</p>
+        </div>
+
+        <div class="clearFloat"></div>
+
+        <div id="correo">
+            <h4>Correo:</h4>
+            <p>LimpiezaHospitalaria@sterisafe.com</p>
+        </div>
+
+        <div class="clearFloat"></div>
+
+        <blockquote>
+            <p> <span style='font-style: italic;'>Valeriu Butulescu</span><cite><strong> <small>“dijo:...La higiene
+                            equivale a dos terceras partes de la salud.”</small></strong></cite>
+            </p>
+        </blockquote>
+
+        <footer>
+            <p>Servicios de limpieza a nivel regional. <br> Clickea en las imagenes para seguirme en mis redes sociales.
+            </p>
+            <a title="Instagram" href="https://www.instagram.com/rubasaecuador/"> <img src="Logo-Ig.png" alt="Instagram"
+                    width="50" height="50"></a>
+            <a href="https://www.facebook.com/Rubasalatam/"><img src="Logo-fb.png" alt="Facebook" width="50"
+                    height="50"></a>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

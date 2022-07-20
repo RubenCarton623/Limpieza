@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Da a conocer el servicio de Clean Express y todos los detalles de mantenimiento y aseo.">
+		<meta name="author" content="Isabel Cañarte León">
+		<link rel="stylesheet" type="text/css" href="CSS/proyecto.css?1">
+		<title>GRUPU 4 - CLEAN EXPRESS</title>
+		<style>
+
+					
+			/*selector de clase*/
+			/*a cada elemento se le aplica inline-block*/
+			.elemento {
+				border: 1px solid #12006a;
+				border-radius: 4px;
+				padding: 5px;
+				min-width: 105px;
+				margin-left: 5px;
+				margin-top: 5px;
+				background-color: #CAE2FF;
+				display: inline-block;
+			}
+			.elemento:nth-child(2){
+				width: 98%
+			}
+			.elemento:nth-child(3){
+				background-color: #BBC3EB;
+				padding-right: 37.6px;
+				padding-left: 37.6px;
+				text-align: center;
+				width: 26.2%;
+			}
+			.elemento:nth-child(4){
+				background-color: #BBC3EB;
+				padding-right: 37.6px;
+				padding-left: 37.6px;
+				text-align: center;
+				width: 26.2%;
+			}
+			.elemento:nth-child(5){
+				background-color: #BBC3EB;
+				padding-right: 37.6px;
+				padding-left: 37.6px;
+				text-align: center;
+				width: 26.2%;
+			}
+			.elemento:nth-child(6){
+				padding-right: 59px;
+				padding-left: 59px;
+				width: 62.5%;
+			}
+			.elemento:nth-child(9){
+				text-align: center;
+				width: 98%;
+			}
+			.elemento:nth-child(13){
+				text-align: center;
+				width: 98%;
+			}
+
+			.caja {
+				border: 1px solid blueviolet;
+				border-radius: 4px;
+				padding: 5px;
+				min-width: 105px;
+				margin-left: 5px;
+				margin-top: 5px;
+				background-color: #FFFFFF;
+				display: inline-block;
+				width: 22%;
+			}
+			.caja:nth-child(1){
+				text-align: center;
+				width: 98%
+			}
+			.caja:nth-child(2){
+				text-align: center;
+				padding-right: 10px;
+				padding-left: 10px;
+				width: 36%;	
+			}
+			.caja:nth-child(3){
+				padding-right: 63px;
+				padding-left: 63px;
+				width: 50%;
+			}
+			.caja:nth-child(4){
+				background-color: #BBC3EB;
+				padding-right: 59px;
+				padding-left: 59px;
+				width: 39.3%;
+			}
+			.caja:nth-child(5){
+				background-color: #BBC3EB;
+				padding-right: 59px;
+				padding-left: 59px;
+				width: 39.3%;
+			}
+			/*selecor de ID*/
+			#pie{
+				border: 1px solid blueviolet;
+				border-radius: 4px;
+				padding: 15px;
+				margin-left: 5px;
+				margin-top: 5px;
+				background-color: #2A297F;
+				display: inline-block;
+				text-align: center;
+				width: 96.2%
+			}
+
+			/*selector de tipo*/
+			p{
+				text-align: center;
+				font-size: 20px;
+			}
+
+			#galeria{
+				width: 95%;
+				margin: 50px auto 50px;
+				display: grid;
+				grid-template-columns: repeat(3,1fr);
+				grid-gap: 30px;
+			}
+			#galeria img{
+				border-radius: 5px;
+				width: 100%;
+				cursor: pointer;
+				transition: 1s;
+			}
+			#galeria img:hover{
+				transform: scale(1.2);
+			}
+			#imgActiva {
+                width: 100%;
+                height: auto;
+                }
+
+        /*caja de imagenes principal*/
+
+			#img-Princ {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 10;
+				background-color: rgba(0, 0, 0, 0.9);
+				display: none;
+				justify-content: center;
+				align-items: center;
+			}
+
+			/*caja de imagenes interna*/
+
+			#imgInter {
+				border: 2px #000000 solid;
+				padding: 2px;
+				background: #3f3f3f;
+				max-width: 500px;
+				min-height: 400px;
+				position: relative;
+				display: flex;
+				justify-content: center;
+			}
+
+			/*Botones*/
+
+			button {
+				cursor: pointer;
+				background: transparent;
+				border: none;
+				color: #f3f3f3;
+			}
+			#btCerrar {
+				font-weight: bold;
+				box-shadow: 0 0 15px black;
+				color: black;
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-size: 3rem;
+			}
+			#btAtras {
+				font-weight: bold;
+				box-shadow: 0 0 15px black;
+				color: black;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				font-size: 3rem;
+			}
+			#btAdelante {
+				font-weight: bold;
+				box-shadow: 0 0 15px black;
+				color: black;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				font-size: 3rem;
+			}
+
+			.acordeon {
+				width: 93.5%;
+				padding: 2rem;
+				transition: all 0.4s ease;
+				border-radius: 1rem;
+				min-width: 105px;
+				margin-left: 5px;
+				margin-top: 5px;
+				background-color: #87CEEB;
+			}
+
+			.acordeon .pregunta {
+				background-color: #d7e3f9;
+				text-align: center;
+				margin: 0 0 1rem;
+				padding: 1rem;
+				transition: all 0.4s ease;
+				border-radius: 1rem;
+			}
+
+			.acordeon .h2 {
+				margin: 0 0 1rem;
+				padding: 1rem;
+				transition: all 0.4s ease;
+				border-radius: 1rem;
+				cursor: pointer;
+			}
+
+			.acordeon .info {
+				text-align: center;
+				height: 0;
+				padding: 0rem;
+				overflow: hidden;
+				transition: all 0.5s ease;
+			}
+
+			.acordeon .pregunta.activo .info {
+				height: 4rem;
+			}
+		</style>
+	</head>
+	
+	<body>		
+		<div class="contenedor">
+			<header>
+                <div class="encabezado-logo-titulo">
+                    <div class="encabezado-ls">
+                        <img src="imagen/grupo4.png" alt="logo" width="120" height="110">
+                    </div>
+                    <div class="encabezado-ls2">
+                        <h1 style="text-align: right;font-size: 50px;padding: 30px 40px;">SERVICIOS DE LIMPIEZA</h1>
+                    </div>
+                </div>            
+                <nav>
+                    <ul class="lista-ls">
+                        <li><a href="presentacion.html">Inicio</a></li>
+                        <li><a href="#">Servicios</a>
+                        	<ul class="lista-ls2">
+                        		<li><a href="VeraRuben.html">Limpieza en alturas</a></li>
+		                        <li><a href="CañarteIsabel.html">Clean express</a></li>
+		                        <li><a href="VillotaKendrick.html">Desinfección hospitalaria</a></li>
+		                        <li><a href="SanchezAndy.html">Clean working</a></li>
+		                        <li><a href="SellanLuis.html">Limpieza inteligente institucional</a></li>
+                        	</ul>
+                        </li>
+                        <li><a href="formularios/solititudservicios.html">Solicitud de Servicios</a></li>
+                        <li><a href="formularios/reclamo.html">Reclamo</a></li>
+                        <li><a href="formularios/contratamos.html">Trabaja con nosotros</a></li>
+                        <li><a href="formularios/comentarios.html">Comentarios</a></li>
+                        <li><a href="formularios/contactanos.html">Contáctanos</a></li>                    
+                    </ul>
+                </nav>           
+            </header>
+				<div class="elemento">
+					<h1  style="text-align: center; font-size: 30px;">TRABAJO DE FORMA IMPECABLE</h1>
+				</div>
+				<div class="elemento" style="background: #87CEEB;">
+					<img src="imagen/limpieza1.jpg" alt="Limpieza de pisos" width="280" height="250">
+					<p>Limpieza de interiores en domicilios</p>
+				</div>
+				<div class="elemento" style="background: #87CEEB;">
+					<img src="imagen/limpieza2.jpg" alt="Limpieza de pisos" width="280" height="250">
+					<p>Comedores lavados, secados y pulidos</p>
+				</div>
+				<div class="elemento" style="background: #87CEEB;">
+					<img src="imagen/limpieza3.jpg" alt="Limpieza de pisos" width="280" height="250">
+					<p>Limpieza de césped natural o artificial</p>
+				</div>
+				<div class="elemento">
+					<p>Poniendo en práctica todas las medidas necesarias de bioseguridad para protegerte y protegernos del COVID-19</p>
+					<br>
+					<dl>
+						<dt>Nuestro personal cuenta con equipo de protección en todo momento:</dt>						
+							<dd>-Uso de mascarilla en todo momento</dd>
+							<dd>-Guantes de protección</dd>
+							<dd>-Caretas protectoras de ser necesario</dd>
+							<dd>-Práctica de higiene entre los trabajadores</dd>
+						</dl>
+					<br>
+					<p><strong>TU BIENESTAR Y SALUD ¡ES LO MÁS IMPORTANTE!</strong></p>
+				</div>
+				<div class="elemento">
+					<img src="imagen/principal.jpg" alt="Limpieza con bioseguridad" width="290" height="260">
+				</div>
+			<section>
+				<div class="caja">
+					<h2 title="enfoque" >Mantenimiento y Aseo de Forma Rápida y Segura</h2>
+				</div>
+				<div class="caja">
+					<video src="video/limpsuelo.mp4" controls loop></video>
+				</div>
+				<div class="caja">
+					<p>Ejecutamos nuestras funciones, con personal de limpieza calificado y capacitado, debidamente uniformado, con experiencia en el uso de maquinaria y productos que son cuidadosamente seleccionados o fabricados para cada uno de nuestros clientes</p>
+					<p>Así mismo se encuentra  supervisado permanentemente en la ejecución de sus trabajos, puntualidad rigurosa y excelente presentación.</p>
+					<br>
+					<p>Nos encontramos prestando servicios con eficiencia y calidad en los siguientes segmentos:</p>
+					<br>
+				</div>
+				<div class="caja">
+					<dl>
+						<dt>Centros Comerciales</dt>						
+							<dd>Locales deshabilitados, pasillos, patios de comidas, parqueaderos, etc</dd>
+					</dl>
+					<dl>
+						<dt>Entidades Financieras</dt>
+							<dd>Oficinas y demás áreas requeridas</dd>
+					</dl>
+					<dl>
+						<dt>Unidades Educativas</dt>
+							<dd>Áreas de recreación internas y externas, aulas, audiorios y demás</dd>
+					</dl>
+				</div>
+				<div class="caja">
+					<dl>
+						<dt>Dejamos su casa o departamento recién construido o remodelado listo para que pueda habitarla.</dt>
+							<dd>Eliminación de polvos de closets.</dd>
+							<dd>Lavado de pisos y eliminado de rastros de pintura.</dd>
+							<dd>Limpieza de puertas y vidrios.</dd>
+							<dd>Eliminación de polvo de estantería, anaqueles de cocina.</dd>
+							<dd>Lavado de pisos exteriores.</dd>
+
+					</dl>
+				</div>
+			</section>
+			<div class="elemento">
+				<h1>GALERÍA DE IMÁGENES</h1>
+			</div>
+				
+			<div id="galeria">
+				<img src="imagen/g1.jpg" alt="">
+				<img src="imagen/g2.jpg" alt="">
+				<img src="imagen/g3.jpg" alt="">
+				<img src="imagen/g4.jpg" alt="">
+				<img src="imagen/g5.jpg" alt="">
+				<img src="imagen/g6.jpg" alt="">			
+			</div>
+
+		<div id="img-Princ">
+			<div id="imgInter">
+				<img id="imgActiva" src="/img/g1.jpg" alt="galeria de imagenes">
+				<button id="btCerrar" type="button">x</button>
+				<button id="btAtras" type="button">&lt;</button>
+				<button id="btAdelante" type="button">&gt;</button>
+
+			</div>
+		</div>
+			<script>
+			const btCerrar = document.querySelector('#btCerrar');
+			const btAdelante = document.querySelector('#btAdelante');
+			const btAtras = document.querySelector('#btAtras');
+			const imagenes = document.querySelectorAll('#galeria img');
+			const caja = document.querySelector('#img-Princ');
+			const imagenActiva = document.querySelector('#imgActiva');
+			let indiceImagen = 0;
+
+			/*Abre el Lightbox*/
+
+			const abrecaja = (event) => {
+			imagenActiva.src = event.target.src;
+			caja.style.display = 'flex';
+			indiceImagen = Array.from(imagenes).indexOf(event.target);
+			};
+
+			imagenes.forEach((imagen) => {
+			imagen.addEventListener('click', abrecaja);
+			});
+
+			/*Cierra el Lightbox */
+
+			btCerrar.addEventListener('click', () => {
+			caja.style.display = 'none';
+			});
+
+			/* Adelanta la imagen*/
+
+			const adelantaImagen = () => {
+			if (indiceImagen === imagenes.length - 1) {
+				indiceImagen = -1;
+			}
+			imagenActiva.src = imagenes[indiceImagen + 1].src;
+			indiceImagen++;
+			};
+
+			btAdelante.addEventListener('click', adelantaImagen);
+
+			/*Retrocede la Imagen*/
+
+			const retrocederImagen = () => {
+			if (indiceImagen === 0) {
+				indiceImagen = imagenes.length;
+			}
+			imagenActiva.src = imagenes[indiceImagen - 1].src;
+			indiceImagen--;
+			};
+
+			btAtras.addEventListener('click', retrocederImagen);
+
+			</script>
+
+		<div class="elemento">
+			<h1>PREGUNTAS FRECUENTES</h1>
+		</div>
+
+		<div class="acordeon">
+			<div class="pregunta">
+			  <h2 class="h2">¿Cómo trabajamos?</h2>
+			  <p class="info">Somos una empresa altamente capacitada que ofrece una amplia gama de soluciones personalizadas para cada industria, permitiendo adaptar nuestros servicios a las necesidades del cliente y ajustándolos a los cambios que se producen con el crecimiento de los mismos.</p>
+			</div>
+			<div class="pregunta">
+			  <h2 class="h2">¿En qué consiste la satisfacción 100% del cliente?</h2>
+			  <p class="info">Si tienes alguna queja sobre la limpieza, háznoslo saber antes de las 72 horas próximas al servicio. Si hay algún problema con la calidad del servicio, puedes programar un servicio de limpieza de compensación según la proporción de la queja. ¡Todo sea por satisfacer al cliente!</p>
+			</div>
+			<div class="pregunta">
+			  <h2 class="h2">¿Los profesionales realizan la limpieza son empleados dependientes o independientes?</h2>
+			  <p class="info">Nuestro objetivo es facilitarte la vida. Cada profesional de limpieza que se registra en nuestro sistema trabaja como empleado del hogar dependiente pero utiliza la infraestructura tecnológica,para conseguir una mayor cartera de clientes. ¡Igual que tú!</p>
+			</div>
+		  </div>
+			<script >
+				const pregunta    = document.querySelectorAll('.pregunta')
+				const h2        = document.querySelectorAll('.h2')
+					
+
+				// Cuando CLICK en h2,
+					// QUITAR la clase activo de TODOS los bloque
+					// Vamos a añadir la clase activo al BLOQUE con la POSICION del h2
+
+				// Recorrer TODOS los h2
+				h2.forEach( ( cadaH2 , i )=>{
+					// Asignando un CLICK a cada h2
+					h2[i].addEventListener('click', ()=>{
+
+						// Recorrer TODOS los bloque
+						pregunta.forEach( ( cadaBloque , i )=>{
+							// Quitamos la clase activo de TODOS los bloques
+							pregunta[i].classList.remove('activo')
+						})
+						// Añadiendo la clase activo al bloque cuya posición sea igual al del h2
+						// (Línea número 12)
+						pregunta[i].classList.add('activo')
+
+					})
+				})
+			</script>
+
+
+			<footer>
+				<div id="pie">
+					<address style="font-size: 15px; color: #FFFFFF;">
+						Isabel Cañarte León<br>
+						<a href="mailton:isabelnayeli.cl2@gmail.com" style="color: #FFFFFF;">isabelnayeli.cl2@gmail.com</a><br>
+						Guayaquil, EC<br>
+					</address>
+					<p style="color: #FFFFFF;">Copyright &copy; 2022-2023 </p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

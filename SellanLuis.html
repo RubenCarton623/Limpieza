@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Grupo-04</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Informa a detalle las secciones dentro de la limpieza inteligente institucional, el trabajo que se realiza y el tiempo que lleva en el mercado">
+		<meta name="author" content="Luis Sellan">
+        <link rel="stylesheet" type="text/css" href="CSS/proyecto.css?1">   
+        
+        <style>                                                
+            .principio-ls{
+                display: inline-block;
+                margin-left: 30px;
+                margin-right: 30px;
+
+            }
+
+            .principio-ls p{
+                font-size: 16px;
+                margin-bottom: 40px;
+                margin-top: 40px;
+                font-family: arial;
+            }
+
+            .principio-ls img{
+                border-style: double;
+                border-color: #4F94F1;
+            }
+
+            .contenedor-principio-ls{
+                margin-top: 50px;
+                margin-bottom: 100px;
+                text-align: center;
+            }
+
+            .contenedor-img-ls{
+                margin: 20px;
+                text-align: center;
+                background: #121921;
+                padding-top: 5px;
+                padding-bottom: 3px;
+            }
+
+            #titulos{
+                
+                display: flex;
+                border-style: dashed;
+                border-color: #54999d;
+                padding: 10px;
+            }
+
+            #h1-1{
+                color: #4F94F1;      
+                text-align: center;
+            }
+            
+            .ima-carrusel{
+                margin: 10px;
+                
+            }
+            
+            .tit{
+                padding: 15px;
+                background: #3b6d77;
+                text-decoration: none;
+                color: white;
+                margin-left: 5px;
+                margin-right: 5px                
+            }
+            
+            .tit:hover{
+                background: #2a4a55;
+                color: white;
+            }
+            
+            .encabezado-ls2{
+                margin-bottom: 30px;
+            }                    
+
+        </style>
+    </head>
+    
+    <body>
+        <div class="contenedor">
+           <header>
+                <div class="encabezado-logo-titulo">
+                    <div class="encabezado-ls">
+                        <img src="imagen/grupo4.png" alt="logo" width="120" height="110">
+                    </div>
+                    <div class="encabezado-ls2">
+                        <h1 style="text-align: right;font-size: 50px;padding: 30px 40px;">SERVICIOS DE LIMPIEZA</h1>
+                    </div>
+                </div>            
+                <nav>
+                    <ul class="lista-ls">
+                        <li><a href="presentacion.html">Inicio</a></li>
+                        <li><a href="#">Servicios</a>
+                            <ul class="lista-ls2">
+                                <li><a href="VeraRuben.html">Limpieza en alturas</a></li>
+                                <li><a href="CañarteIsabel.html">Clean express</a></li>
+                                <li><a href="VillotaKendrick.html">Desinfección hospitalaria</a></li>
+                                <li><a href="SanchezAndy.html">Clean working</a></li>
+                                <li><a href="SellanLuis.html">Limpieza inteligente institucional</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="formularios/solititudservicios.html">Solicitud de Servicios</a></li>
+                        <li><a href="formularios/reclamo.html">Reclamo</a></li>
+                        <li><a href="formularios/contratamos.html">Trabaja con nosotros</a></li>
+                        <li><a href="formularios/comentarios.html">Comentarios</a></li>
+                        <li><a href="formularios/contactanos.html">Contáctanos</a></li>                    
+                    </ul>
+                </nav>           
+            </header>
+            
+            <h2 style="color: white; font-style: italic; text-align: center; background: #121921; margin-top: 30px; margin-bottom: 10px; padding: 10px;">SERVICIOS</h2>
+            <br><br>
+            <div id="titulos">
+                <a class="tit" id="uno" onmouseover="cambiarPestania(this)" href="#">Limpieza Domiciliaria</a>
+                <a class="tit" id="dos" onmouseover="cambiarPestania(this)" href="#">Limpieza de exteriores</a>
+                <a class="tit" id="tres" onmouseover="cambiarPestania(this)" href="#">Limpieza de espacio públicos</a>
+                <a class="tit" id="cuatro" onmouseover="cambiarPestania(this)" href="#">Limpieza de instituciones</a>
+                <a class="tit" id="cinco" onmouseover="cambiarPestania(this)" href="#">Fumigaciones en interiores</a>
+                <a class="tit" id="seis" onmouseover="cambiarPestania(this)" href="#">Fumigaciones en general</a>
+            </div><br>
+            
+            <div id="contenido">
+                                       
+            </div><br>
+            
+            <div class="contenedor-principio-ls">
+                <div class="principio-ls">
+                    <p>
+                        Con más de 25 años de experiencia somos los pioneros en servicios de<br> limpieza y mantenimiento.<br>
+                    </p>
+                    
+                    <p>
+                        Ofrecemos <b>planes anuales y mensuales</b> específicos y especializados de<br> limpieza para edificios, 
+                        centros comerciales, centros empresariales, bancos, <br>colegios, hospitales y hoteles.
+                    </p>
+                    
+                    <p>
+                        <b>Hagamos hoy un Plan de Limpieza que se ajuste a sus necesidades.</b><br>
+                    </p>                
+                    <input name="boton1" type="image" src="imagen/clic2.png" alt="clic2" width="500" height="100">
+                </div> 
+                
+                <div class="principio-ls">
+                    <img src="imagen/img-central.jpg" alt="central" width="500" height="325">
+                </div>            
+            </div>
+                    
+            <section>
+                <h2 id="h1-1">¡Te mostramos algunos de los trabajos que realizamos!</h2>
+                <div class="contenedor-img-ls">
+                    <img class="ima-carrusel" src="imagen/img1.jpg" alt="central1" width="300" height="175">
+                    <img class="ima-carrusel" src="imagen/img2.jpg" alt="central2" width="300" height="175">
+                    <img class="ima-carrusel" src="imagen/img3.jpg" alt="central3" width="300" height="175">
+                    <img class="ima-carrusel" src="imagen/img4.jpg" alt="central4" width="300" height="175">
+                </div>
+            </section>  
+            <script>
+                function cambiarPestania(nodoA) {
+                    // obtener los elementos a manipular
+                    let div = document.getElementById("contenido");
+
+                    let id = nodoA.getAttribute("id");
+                    let cont = "";
+                    switch (id) {
+                        case "uno":
+                            cont= "<center><h1> Limpieza Domiciliaria </h1></center>\n\
+            \n\                     <center><img src=imagen/img1.jpg alt=imagen width=800px height=350px></center>\n\
+                                    <center><p><i><b>Detalles: Limpieza de casas privadas en ciudadelas </b><br> \n\
+                                    o urbanizaciones. También contamos con servicios para casas dentro de zonas urbanas<br> \n\
+                                    y residenciales.</i></p></center>";
+                            break;
+                        case "dos":
+                            cont = "<center><h1> Limpieza de exteriores </h1></center>\n\
+            \n\                     <center><img src=imagen/img2.jpg alt=imagen width=800px height=350px></center>\n\
+                                    <center><p><i><b> Detalles: Contamos con servicios de limpieza de exteriores</b><br> \n\
+                                    zonas como cercanías de una escuela o colegio incluso hasta de facultades<br>\n\
+                                    universitarias que es donde más gente transcurre en el día.</i></p></center>";
+                            break;
+                        case "tres":
+                            cont = "<center><h1> Limpieza de espacio públicos </h1></center>\n\
+            \n\                     <center><img src=imagen/img3.jpg alt=imagen width=800px height=350px></center>\n\
+                                    <center><p><i><b>Detalles: Limpieza de espacio públicos como parques, avenidas .</b><br> \n\
+                                    principales e incluso zonas urbanas.</i></p></center>";
+                            
+                            break;
+                        case "cuatro":
+                            cont = "<center><h1> Limpieza de instituciones </h1></center>\n\
+            \n\                     <center><img src=imagen/img4.jpg alt=imagen width=800px height=350px></center>\n\
+                                    <center><p><i><b>Detalles: Limpieza de instituciones como universidades o .</b><br> \n\
+                                    lugares de trabajos como empresas y oficinas.</i></p></center>";
+                            
+                            break;
+                        case "cinco":
+                            cont = "<center><h1> Fumigaciones en interiores </h1></center>\n\
+            \n\                     <center><img src=imagen/img5.jpg alt=imagen width=800px height=350px></center>\n\
+                                    <center><p><i><b>Detalles: Fumigaciones dentro de areas pequeñas como casas.</b><br> \n\
+                                    o zonas empozadas en parques o alcantarillas.</i></p></center>";
+                            
+                            break;
+                        case "seis":
+                            cont = "<center><h1> Fumigaciones en general </h1></center>\n\
+            \n\                     <center><img src=imagen/img6.jpg alt=imagen width=800px height=350px></center>\n\
+                                    <center><p><i><b>Detalles: Servicio de fumigaciones en general, donde el cliente.</b><br> \n\
+                                    lo necesite.</i></p></center>";
+                            
+                            break;
+                    }
+                    div.innerHTML = cont;    
+                    
+                    //limpiar los estilos a todos los enlaces
+                    let enlaces = document.querySelectorAll("#titulos a");// retorna un arreglo de objetos
+                       // console.log(enlaces);
+                    for(let i=0; i<enlaces.length;i++){
+                        enlaces[i].style.border='#54999d';
+                        enlaces[i].style.background = '#3b6d77';
+                    }                   
+                    // cambiar el enlace seleccionado
+                    nodoA.style.border="1px solid white";
+                    nodoA.style.background="#2a4a55";
+                    
+                  //  nodoA.setAttribute("style","background:violet");                               
+                }
+            </script>
+            <footer>
+    	    <div id="pie">
+    	        <address style="font-size: 15px; color: #FFFFFF;">
+                        GRUPO 4<br>
+                        <a href="mailton:grupo4@gmail.com" style="color: #FFFFFF;">grupo4@gmail.com</a><br>
+                        <p>Guayaquil, EC</p>
+    		</address>
+                        <p style="color: #FFFFFF;">Copyright &copy; 2022-2023 </p>
+                </div>
+    	</footer>
+        </div>
+    </body>    
+</html>

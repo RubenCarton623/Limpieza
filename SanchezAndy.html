@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Se muestra información sobre el servicio de Clean Working, así mismo como sus planes de limpieza y videos que demuestran el trabajo desempeñado.">
+	<meta name="author" content="Andy Sanchez Paiva">
+    <title>GRUPO 4 - SERVICIOS DE LIMPIEZA</title>
+    <link rel="stylesheet" type="text/css" href="CSS/proyecto.css?1">
+    <style>
+        body {
+            margin: 0;
+        }
+
+
+        .bloque {
+            width: 100%;
+            height: 380px;
+            background-color: #327d9add;
+        }
+
+        .bloque {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .bloque-uno {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #327d9add;
+            border-radius: 40px;
+        }
+
+        .bloque-uno div:nth-child(1) {
+            width: 60%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #d6eae4;
+        }
+
+        .bloque-uno div:nth-child(2) {
+            width: 30%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #d6eae4;
+        }
+
+        .bloque-dos {
+            background-color: #D4F4DB;
+            border-radius: 40px;
+        }
+
+        .bloque-dos div:nth-child(1) {
+            width: 30%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #327d9add;
+        }
+
+        .bloque-dos div:nth-child(2) {
+            width: 30%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #327d9add;
+        }
+
+        .bloque-tres {
+            background-color: #327d9add;
+            border-radius: 40px;
+        }
+
+        .bloque-tres div:nth-child(1) {
+            width: 30%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #d6eae4;
+        }
+
+        .bloque-tres div:nth-child(2) {
+            width: 60%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #d6eae4;
+        }
+
+        .bloque-cuatro {
+            background-color: #D4F4DB;
+            border-radius: 40px;
+        }
+
+        .bloque-cuatro div:nth-child(1) {
+            width: 30%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #327d9add;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        .bloque-cuatro div:nth-child(2) {
+            width: 30%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #327d9add;
+        }
+
+        .bloque-cuatro div:nth-child(3) {
+            width: 30%;
+            height: 70%;
+            border-radius: 10px;
+            background-color: #327d9add;
+        }
+
+        /*selector combinatorio*/
+        .bloque-cuatro div~div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        .bloque div:hover {
+            transform: scale(1.05);
+            transition: 0.5s;
+        }
+
+        #bloque-dos-primero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bloque-dos-primero>figure {
+            color: white;
+        }
+
+        #bloque-dos-segundo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bloque-dos-segundo h2 {
+            text-align: center;
+            width: 80%;
+            height: 15%;
+            color: white;
+            margin: 0;
+        }
+
+        
+
+        #bloque-dos-segundo h4 {
+            text-align: center;
+            width: 80%;
+            height: 80%;
+            color: white;
+            margin: 0;
+        }
+
+        /*selectores id*/
+        #parrafo-seccion-cuatro {
+            width: 80%;
+            height: 50%;
+            text-align: center;
+        }
+
+        #div-seccion-cuatro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #parrafo-one {
+            text-align: center;
+            width: 80%;
+            height: 50%;
+            margin: 0;
+        }
+
+        #imagen-shirt {
+            border-radius: 10px;
+            width: 65%;
+            height: 90%;
+        }
+
+        /*extra: diseño responsivo*/
+        @media (max-width:777px) {
+            #parrafo-one {
+                position: static;
+                font-size: 12px;
+                margin-top: -70px;
+            }
+
+            #parrafo-seccion-cuatro {
+                position: relative;
+                font-size: 12px;
+
+            }
+
+            #bloque-dos-segundo h2 {
+                position: relative;
+                font-size: 12px;
+            }
+
+            #bloque-dos-segundo h4 {
+                position: relative;
+                font-size: 12px;
+            }
+
+            #titulo-seccion-cuatro {
+                margin: 0;
+                margin-top: -70px;
+                font-size: 14px;
+            }
+
+            #imagen-shirt {
+                border-radius: 10px;
+                width: 65%;
+                height: 40%;
+            }
+
+        }
+
+        @media (max-width:400px) {
+            #parrafo-one {
+                position: relative;
+                font-size: 9px;
+                margin-top: -70px;
+            }
+
+            #parrafo-seccion-cuatro {
+                position: relative;
+                font-size: 9px;
+
+            }
+
+            #bloque-dos-segundo h2 {
+                position: relative;
+                font-size: 9px;
+            }
+
+            #bloque-dos-segundo h4 {
+                position: relative;
+                font-size: 9px;
+            }
+
+        }
+
+        .video {
+            padding: 10px;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        #Producto,
+        #contenido {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(59, 97, 97);
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        #contenido {
+            visibility: hidden;
+        }
+
+        main a {
+            display: inline-block;
+            background-color: #d9d6d9f1;
+            color: rgb(36, 34, 34);
+            font-weight: bold;
+            padding: 15px;
+            margin: 2px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+                <div class="encabezado-logo-titulo">
+                    <div class="encabezado-ls">
+                        <img src="imagen/grupo4.png" alt="logo" width="120" height="110">
+                    </div>
+                    <div class="encabezado-ls2">
+                        <h1 style="text-align: right;font-size: 50px;padding: 30px 40px;">SERVICIOS DE LIMPIEZA</h1>
+                    </div>
+                </div>            
+                <nav>
+                    <ul class="lista-ls">
+                        <li><a href="presentacion.html">Inicio</a></li>
+                        <li><a href="#">Servicios</a>
+                            <ul class="lista-ls2">
+                                <li><a href="VeraRuben.html">Limpieza en alturas</a></li>
+                                <li><a href="CañarteIsabel.html">Clean express</a></li>
+                                <li><a href="VillotaKendrick.html">Desinfección hospitalaria</a></li>
+                                <li><a href="SanchezAndy.html">Clean working</a></li>
+                                <li><a href="SellanLuis.html">Limpieza inteligente institucional</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="formularios/solititudservicios.html">Solicitud de Servicios</a></li>
+                        <li><a href="formularios/reclamo.html">Reclamo</a></li>
+                        <li><a href="formularios/contratamos.html">Trabaja con nosotros</a></li>
+                        <li><a href="formularios/comentarios.html">Comentarios</a></li>
+                        <li><a href="formularios/contactanos.html">Contáctanos</a></li>                    
+                    </ul>
+                </nav>           
+            </header>
+        <main>
+            <ul id="Producto">
+                <li><a id="casilla1" href="#" onmouseover="mostrar(this)">Limpieza de Telefono</a></li>
+                <li><a id="casilla2" href="#" onmouseover="mostrar(this)">Limpieza de Computador</a></li>
+                <li><a id="casilla3" href="#" onmouseover="mostrar(this)">Limpieza de Baño</a></li>
+            </ul>
+            <div id="contenido"></div>
+        </main>
+        <script >
+            var contenido = document.getElementById("contenido");
+            function mostrar(nodo) {
+                contenido.style = "visibility: visible;";
+                let imagen = document.createElement("img");
+                imagen.style.height = '150px';
+                imagen.style.width = '150px';
+                imagen.style.borderRadius = '15px';
+                var parrafo = document.createElement("p");
+                parrafo.style.color = 'black';
+                parrafo.style.textAlign = 'justify';
+                parrafo.style.width = '40%';
+                parrafo.style.marginLeft = '25px';
+                switch (nodo.id) {
+                    case "casilla1":
+                        imagen.src = 'imagen/tele.jpg';
+                        parrafo.textContent = 'Los resfriados y enfermedades respiratorias se contagian por vía oral. Hay que tener en cuenta que los auriculares del teléfono es lo que más cerca está de nuestra boca y, por ello, lo que tendremos más cerca para coger algún tipo de contagio. Los motivos expuestos exigen que la limpieza del teléfono conlleve una desinfección.';
+                        break;
+                    case "casilla2":
+                        imagen.src = 'imagen/compu.jpg';
+                        parrafo.textContent = 'Limpiar un ordenador, ya sea un sobremesa o un portátil, es un procedimiento relativamente sencillo que nos tomará aproximadamente un par de horas y que debemos realizar de forma periódica. Dependerá del entorno en el que nos encontremos y su ubicación, ya que no es lo mismo tener una torre a la altura del suelo en una casa con mascotas que tenerlo sobre la mesa en un laboratorio.';
+                        break;
+                    case "casilla3":
+                        imagen.src = 'imagen/baño.jpg';
+                        parrafo.textContent = 'En un edificio de oficinas, la limpieza de los baños se debe realizar por lo menos una vez al día. Consiste en usar detergente común para limpiar todas las superficies. Posteriormente se retira el producto y se procede a secar. Lo ideal es generar un cronograma de limpieza que esté a la vista, en la puerta de cada baño, a fin de garantizar que la tarea se lleva adelante con la frecuencia planeada. ';
+                        break;
+                }
+                contenido.appendChild(imagen);
+                contenido.appendChild(parrafo);
+            }
+            function eliminar() {
+                while (contenido.hasChildNodes()) {
+                    contenido.removeChild(contenido.lastChild);
+                }
+                contenido.style.visibility = 'hidden';
+            }
+            document.getElementById("casilla1").addEventListener('mouseout', eliminar);
+            document.getElementById("casilla2").addEventListener('mouseout', eliminar);
+            document.getElementById("casilla3").addEventListener('mouseout', eliminar);
+        </script>
+        <div class="seccion-primero">
+
+            <div class="dividir-seccion-uno">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-left: auto;
+                margin-right:auto ;">
+                    <h1 class="encabezado">Clean Working</h1>
+                    <br>
+                    <p id="parrafo">
+                        La actual crisis de salud ha puesto de manifiesto hasta qué punto los gérmenes, virus y
+                        bacterias dañinos se propagan a un ritmo exponencial. En las empresas, las oficinas son por
+                        definición verdaderos nidos y puntos de tránsito de miles de microorganismos habitados por
+                        infinidad de personas. Por tanto, no basta con limpiar las oficinas, sino sobre todo con
+                        desinfectarlas. Por ello, la desinfección de la oficina es una labor urgente por la salud de los
+                        empleados del mismo departamento y empresa.
+                        <br><br>
+
+                        <span style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-left: auto;
+                        margin-right:auto ;">"El orden y la limpieza en la oficina impulsa tu vida."</span>
+                    </p>
+                </div>
+                <br>
+                <div class="seccion-uno-derecho">
+                    <div class="circulo" id="circulo-arriba"></div>
+                    <div class="circulo" id="circulo-medio">
+                        <div style="text-align: center;">
+                            <img src="imagen/work.JPG" alt="logo" width="320" height="240" >
+                        </div>
+                    </div>
+                    <div class="circulo" id="circulo-abajo"></div>
+                </div>
+            </div>
+            <br><br>
+            
+            <section class="seccion-segundo">
+                <h3 style="text-align: center;">ESPACIO DE TRABAJO</h3><br>
+                <div class="bloque bloque-uno">
+                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                        <p id="parrafo-one">
+                            Un espacio de trabajo limpio y bien aseado es necesario para preservar su salud y la de sus
+                            empleados. El Instituto Nacional de Salud e Investigación Médica demuestra, por ejemplo, en
+                            un informe, cómo la mera presencia humana en las oficinas puede afectar a la salud de los
+                            locales. Por ejemplo, la saliva, las escamas de piel o el pelo pueden desprenderse
+                            espontáneamente de un empleado y depositarse en los objetos que toca.
+                        </p>
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                        <img id="imagen-shirt" src="imagen/limpa.jpg" alt="limpa" />
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-left: auto;
+                margin-right:auto ;">
+                <h1 class="encabezado">Planes de Limpieza</h1>
+                <br>
+                <br>
+            </div>
+            <section class="seccion-tercero">
+                <div class="bloque bloque-dos">
+                    <div id="bloque-dos-primero">
+                        <figure
+                            style=" width: 80%; height:70%  ; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <img style="width: 80%; height:95% ; border-radius: 10px;" src="imagen/bad_shirt.png"
+                                alt="3personas" />
+                        </figure>
+
+                    </div>
+                    <div id="bloque-dos-segundo">
+                        <h2>Planes: </h2>
+                        <ul>
+                            <li>Plan correctivo: Consiste en reparar averías, la respuesta de los secciones de
+                                mantenimiento de oficinas debe ser rápida y efectiva.</li><li style="padding: 10px;"></li>
+                            <li>Plan conductivo: Con el fin de controlar el funcionamiento de las instalaciones se
+                                revisan a diario las condiciones de temperatura y seguridad en las que se encuentran las
+                                instalaciones antes de que lleguen los trabajadores.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <br>
+            <br>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-left: auto;
+                margin-right:auto ;">
+                <h1 class="encabezado">Muebles de Oficina</h1>
+                <br>
+                <br>
+            </div>
+            <section class="seccion-cuarto">
+                <div class="bloque bloque-tres">
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <figure
+                            style=" width: 80%; height:60%  ;display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <img style="width: 105%; height:140% ; border-radius: 10px;" src="imagen/mueble.jpg"
+                                alt="tapizado" />
+                        </figure>
+                    </div>
+                    <div id="div-seccion-cuatro">
+                        <h3 id="titulo-seccion-cuatro">Tapizados</h3>
+                        <p id="parrafo-seccion-cuatro">
+                            Son un poco complicados de limpiar, ya que están recubiertos de un textil, piel o piel
+                            sintética que en muchas ocasiones absorben la suciedad, haciendo casi imposible obtener un
+                            buen resultado.
+
+                            En sillas, sofás, sillones, etc., si la cobertura del asiento, respaldo y apoyabrazos es
+                            textil, se aspirará diariamente utilizando un aspirador.
+
+                            Periódicamente, se ha de limpiar con una solución de champú o con productos específicos para
+                            textiles, cuidando especialmente de no mojar en exceso el asiento o la parte recubierta, ya
+                            que la esponja que contiene en el interior puede expulsar suciedad al mojarse, manchando la
+                            tapicería exterior.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-left: auto;
+                margin-right:auto ;">
+                <h1 class="encabezado">Videos Demostrativos</h1>
+                <br>
+                <br>
+            </div>
+            <section class="seccion-quinto">
+                <h4 style="text-align: center;">ENTERATE DE NUESTRO TRABAJO</h4><br>
+                <div class="bloque bloque-cuatro">
+                    <div class="video">
+                        <iframe width="350" height="190" src="https://www.youtube.com/embed/xuLpIw8pkvQ"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <figure
+                            style=" width: 80%; height:70%  ; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <img style="width: 80%; height:95% ; ; border-radius: 10px;" src="imagen/cleaning.jpg"
+                                alt="make" />
+                        </figure>
+                    </div>
+
+                    <div class="video">
+                        <iframe width="350" height="190" src="https://www.youtube.com/embed/DtiH2kF_-s4"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        <div class="salto"></div>
+        <footer>
+            <div id="pie">
+                <p><em style="color: white;">Andy Sanchez</em></p>
+                <a href="mailton:andy.sanchezp@ug.edu.ec" style="color: #FFFFFF;">andy.sanchezp@ug.edu.ec</a>
+                <p style="color: #FFFFFF;">Copyright &copy; 2022-2023 </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

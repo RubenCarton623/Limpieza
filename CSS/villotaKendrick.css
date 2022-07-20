@@ -1,0 +1,24 @@
+
+
+h1,
+h2 {
+    font-weight: bold;
+}
+
+
+footer {
+    border: 2px solid rgb(255, 0, 0);
+    background: #00008B;
+    text-align: center;
+    color: #f8f7f7;
+}
+
+.subtema {
+    font-size: 17px;
+}
+
+#contenedorPrincipal {
+    width: 80%;
+    margin: auto;
+    background: #5cb1cd;
+}

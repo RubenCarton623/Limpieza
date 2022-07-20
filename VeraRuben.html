@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Todos sabemos lo riesgoso que es limpiar en las alturas, pues aquí se muestra a fondo imágenes del trabajo que se realiza y un datito curioso sobre lo que conlleva desempeñar este trabajo.">
+	<meta name="author" content="Ruben Vera Parraga">
+	<title>Grupo-04 LIMPIEZA EN ALTURAS</title>
+	<link rel="stylesheet" type="text/css" href="CSS/proyecto.css?1">
+	<style>		
+		.articulos{
+			width:50%;
+			margin-right:1.5%;
+			float:left;	
+		}
+		
+		.articulos article div{			
+			background: #FFFFFF;
+			padding: 5px;
+			border-radius: 10px;
+			box-shadow: 0 0 15px black;
+		}
+		
+		.deshacer_float{
+			clear:both;
+		}
+		.articulos h3, .articulos h2{
+			background: #87CEEB;
+			 text-align:center;
+			 padding: 10px;
+			 border-radius: 10px;
+			 box-shadow: 0 0 6px black;
+		}
+		.imagenes, .video{
+			padding:3px;			
+			
+			box-sizing:border-box;
+		}
+		figure.imagenes{			
+			border:5px solid #00008B;
+			border-radius: 10px;
+			box-shadow: 0 0 15px black;
+		}
+		.imagenes-grupo{
+			display: flex;
+			justify-content: space-around;
+
+		}
+		
+		aside{
+			width: 90%;
+			margin: auto;
+			font-size: 20px;
+			padding: 30px;
+			
+			background: #87CEEB;
+			color: black;
+			box-shadow: 0 0 15px black;
+			border-radius: 10px;
+			box-sizing:border-box;			
+		}
+		.imagenes_trabajos h2{
+			background: #191932;
+			 text-align:center;	
+			 color:  white;
+			 border-radius: 10px;
+			width: 90%;
+			margin: auto;
+		}
+		.imagenes_trabajos figure:hover{
+				background:#000;
+				color: white;	
+				cursor: pointer;				
+				font-weight: bold;
+			}			
+		
+
+        
+         #imagen-activa{
+        	width: 100%;
+        	height: auto;
+        }
+
+        #contenedor-principal{
+        	position: fixed;
+        	top: 0;
+        	left: 0;
+        	z-index: 10;
+        	width: 100%;
+        	height: 100%;
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	background-color: rgba(0, 0, 0,0.65);
+        	flex-direction: column;
+        }
+        #contenedor-interno{
+        	width: 400px;
+        	height: 300px;
+        	border: 2px white solid;
+        	padding: 2px;
+        	display: flex;
+        	justify-content: center;
+        	position: relative;
+        }
+        #contenedor-interno2{
+        	
+        	border: 2px white solid;
+        	font-size: 20px;
+        	padding: 8px;
+        	background: black;
+        	color: white;
+        	
+        	position: relative;
+        }
+        button{
+        	font-family: Arial;
+        	cursor: pointer;
+        	background: transparent;
+        	border: none;
+        	color: black;
+        }
+
+        #cerrar{
+        	color: black;
+        	position: absolute;
+        	top: 0;
+        	right: 0;
+        	font-size: 3rem;
+        	box-shadow: 0 0 25px red;
+        }
+        #retroceder{
+        	position: absolute;
+        	top: 50%;
+        	left: 0;
+        	font-size: 3rem;
+        	border: 1px white solid;
+        	box-shadow: 0 0 25px black;
+        }
+        #adelanta{
+        	position: absolute;
+        	top: 50%;
+        	right: 0;
+        	font-size: 3rem;
+        	border: 1px white solid;
+        	box-shadow: 0 0 25px black;
+        }
+		     
+        
+		#divcont img{			
+			padding: 20px;
+            width: 350px;
+            height: 350px;            
+            padding: 10px;    
+            border-radius: 10px;
+        }
+        
+        #divcont p{        	        		
+			text-align: justify;
+			padding: 15px;
+        }  
+        #divcont div {
+        	border: 1px solid #ddd;         	
+        	border-radius: 10px;
+			box-shadow: 0 0 15px blue;
+			margin: auto;        	
+			width: 90%;	
+			margin-right: 10px;
+        }
+        .Main{
+        	display: flex;
+        	margin: auto;        	
+			width: 90%;			
+        }
+        .div-lista{
+
+        	display: flex;			
+			justify-content: center;      							      				
+			width: 13%;
+        }
+        #divcont{        	
+        	display: flex;
+        	flex-direction: row;        	        				  
+			border-radius:22px;  			                          
+			margin: auto;        	
+			width: 80%;
+			box-shadow: 0 0 15px black;
+            }
+            .div-lista a{            	
+            	text-decoration: none         		
+            }
+
+            .div-lista .li1{
+            	background: #19285A;
+            	color: white;
+			    display: block;
+			    font-size: 16px;
+            	padding: 22px;
+            	border: 1px solid blue;   
+            	border-radius:22px;   			                          								
+				box-shadow: 0 0 15px #ddd;				
+            }
+            .div-lista li{
+            	list-style:none;
+            	padding: 5px;
+            }
+            .div-lista ul .li1:hover{
+				border: 1px solid #ddd;   
+				box-shadow: 0 0 15px blue;
+				cursor: pointer;				
+				font-weight: bold;
+
+            }
+	</style>
+</head>
+
+<body >
+	<div class="contenedor"  >
+		<header>
+                <div class="encabezado-logo-titulo">
+                    <div class="encabezado-ls">
+                        <img src="imagen/grupo4.png" alt="logo" width="120" height="110">
+                    </div>
+                    <div class="encabezado-ls2">
+                        <h1 style="text-align: right;font-size: 50px;padding: 30px 40px;">SERVICIOS DE LIMPIEZA</h1>
+                    </div>
+                </div>            
+                <nav>
+                    <ul class="lista-ls">
+                        <li><a href="presentacion.html">Inicio</a></li>
+                        <li><a href="#">Servicios</a>
+                        	<ul class="lista-ls2">
+                        		<li><a href="VeraRuben.html">Limpieza en alturas</a></li>
+		                        <li><a href="CañarteIsabel.html">Clean express</a></li>
+		                        <li><a href="VillotaKendrick.html">Desinfección hospitalaria</a></li>
+		                        <li><a href="SanchezAndy.html">Clean working</a></li>
+		                        <li><a href="SellanLuis.html">Limpieza inteligente institucional</a></li>
+                        	</ul>
+                        </li>
+                        <li><a href="formularios/solititudservicios.html">Solicitud de Servicios</a></li>
+                        <li><a href="formularios/reclamo.html">Reclamo</a></li>
+                        <li><a href="formularios/contratamos.html">Trabaja con nosotros</a></li>
+                        <li><a href="formularios/comentarios.html">Comentarios</a></li>
+                        <li><a href="formularios/contactanos.html">Contáctanos</a></li>                    
+                    </ul>
+                </nav>           
+            </header>
+		<main>			
+			<section class="articulos" style="padding: 20px;">
+				<br>
+				<h2 style="text-align: center; background:#19286A; color: white;">Limpieza y mantenimiento en las alturas</h2>
+				<article>
+					<br>
+					<h3 >
+						Nuestro Equipo
+					</h3>
+					<br>
+					<div style="font-size: 18px;">
+						Nuestro equipo de trabajo cuenta con entrenamiento adecuado y las respectivas certificaciones de servicios en altura. Tanto en la parte operativa como seguridad.
+						<br>
+						<br>
+						Completamos nuestra ingeniería de servicios con procedimientos claros y específicos que se diseñan en función del tipo de trabajo a realizar.
+					</div>
+					<br>							
+				</article>
+
+				<article>
+					<h3>
+						¿En que consiste?
+					</h3>
+					<br>					
+					<div>
+						En el momento en el que alguien nos habla de la limpieza de cristales en altura se nos viene a la mente la imagen de un trabajador con casco y arnés colgando desde el piso 40 de un edificio y al trabajador de la oficina de dicha planta asustándose al ver como alguien está colgando desde tanta altura.
+					</div>
+					<br>					
+				</article>
+			</section>
+			<br>		
+			<br><br><br><br>	
+			<div class="video">
+				<iframe src="https://www.climprofesional.com/blog/wp-content/uploads/2017/03/Limpieza-de-cristales-en-altura-moja-y-seca.gif" width="480" height="270"></iframe>
+
+			</div>		
+
+			<div class="deshacer_float"></div>
+			<br>			
+			<!--<hr  size=5 style="background: black;"> -->
+			<section class="imagenes_trabajos" >
+				<br>
+				<h2 style="padding: 10px;">IMAGENES DEL TRABAJO DE LIMPIEZA REALIZADO</h2>	
+				<br><br>
+				<div class="imagenes-grupo">					
+					<figure class="imagenes" >
+						<img src="imagen/ru1.jpg" width="250" height="170" alt="">
+						<figcaption>Personal calificado</figcaption>
+					</figure>
+					<figure class="imagenes">
+						<img src="imagen/ru2.jpg" width="250" height="170" alt="">
+						<figcaption>Limpieza externa Shopping</figcaption>
+					</figure>
+					<figure class="imagenes">
+						<img src="imagen/ru3.jpg" width="250" height="170" alt="">
+						<figcaption>Personal rascacielos frontal</figcaption>
+					</figure>
+					<figure class="imagenes">
+						<img src="imagen/ru4.jpg" width="250" height="170" alt="">
+						<figcaption>Personal rascacielos lateral</figcaption>
+					</figure>
+				</div>						
+				<div class="deshacer_float"></div>				
+
+				<div id="contenedor-principal" style="display: none;">
+					<div id="contenedor-interno">
+						<img id="imagen-activa" src="imagen/ru1.jpg" alt="">
+						<button type="button" id="cerrar">X</button>
+						<button type="button" id="retroceder">&lt;</button>
+						<button type="button" id="adelanta">&gt;</button>
+					</div><br>
+					<div id="contenedor-interno2">
+						<div id="sms-imagen"></div>
+					</div>
+					
+				</div>
+						
+		</section>		
+		<br><br><br><br>
+		</main>
+		<aside>
+			<p>Como ya hemos dicho la mayoría de las nuevas construcciones cuentan con amplios ventanales, por lo que en realidad cualquier edificio con cristales necesita una limpieza. También es verdad que en la primera posición de la lista de edificaciones que necesiten más urgentemente dicha limpieza se deben situar las empresas y oficinas ya que tienen que dar buena imagen.</p>			
+		</aside><br><br>
+		<aside>
+			<p>Vamos a suponer que vas a una reunión y antes de entrar en el edificio te percatas que la fachada está muy sucia, como si hiciese bastante tiempo que nadie la limpiara. Tu percepción sobre la empresa con la que tienes la cita habrá cambiado, porque pensarás que si tiene así de descuidado su edificio cómo será con el resto de las actividades. Por lo que es fundamental dar una buena impresión desde el comienzo, es decir, incluso antes de que entren por la puerta.</p>
+		</aside><br><br>
+		<aside>
+			<p>Un dato curioso es que los trabajadores que reciben la vitamina D proveniente del sol a través de los cristales de la oficina rinden más. Por consiguiente la limpieza de cristales es más importante de lo que en un principio puede parecer, no lo subestimes. Además, si los cristales están reluciente entrará más luz solar, por lo que se podrá ahorrar en electricidad.</p>			
+		</aside>							
+				<br>
+			
+		<div class="deshacer_float"></div>
+		<br><br><br><br>
+		<div class="Main">			
+		<div class="div-lista" >
+			<ul class="lista" id="lis">
+				<li class="li1">Limpieza de vidrios en altura.</li>
+				<li></li>
+				<li class="li1">Limpieza de alucubond.</li>
+				<li></li>
+				<li class="li1">Rehabilitación, restauración de fachadas en altura.</li>
+				<li></li>
+				<li class="li1">Colocación de publicidad en altura.</li>
+					
+			</ul>
+		</div>
+		<br><br>
+			<div id="divcont">
+				<h1 style="margin: auto; width: 30%; padding: 25px; border: solid 1px blue; border-radius: 10px; box-shadow: 0 0 15px black;">CONTAMOS CON LOS MEJORES SERVICIOS</h1>
+				<img src="https://www.climprofesional.com/blog/wp-content/uploads/2017/03/trabajo-en-altura-limpieza-de-cristales.gif" width="350" height="350" alt="" style="margin: auto; width: 50%; padding: 25px;">
+
+								
+			
+			</div>
+
+		</div>
+		<br><br>
+		<footer>
+			<div id="pie">
+			<p><em style="color: white;">Vera Parraga Ruben</em></p>
+			<a href="mailton:ruben.verap@ug.edu.ec" style="color: #FFFFFF;">ruben.verap@ug.edu.ec</a><br>									
+			<p style="color: #FFFFFF;">Copyright &copy; 2022-2023 </p>
+			</div>
+		</footer>	
+	</div>
+
+	<script >
+		//botones
+		const btnCerrar = document.querySelector("#cerrar");
+		const btnRetro = document.querySelector("#retroceder");
+		const btnSiguiente = document.querySelector("#adelanta");
+		const mensajeImg = document.getElementById("sms-imagen");
+
+		
+		const galeria = document.querySelectorAll(".imagenes-grupo figure img");
+		const galeriaContenedor = document.querySelector("#contenedor-principal");
+		const imagenAct = document.querySelector("#imagen-activa")
+
+		let indiceImagen = 0;
+		
+
+		//abrir contenedor
+
+		const abrirContenedor = (e) => {
+			imagenAct.src = e.target.src;
+			galeriaContenedor.style.display = 'flex';
+			indiceImagen = Array.from(galeria).indexOf(e.target);
+			textoImagen(indiceImagen);
+		}
+
+		galeria.forEach((imagen) =>{
+			imagen.addEventListener('click',abrirContenedor);
+		});
+		
+		//Cerrar 
+		btnCerrar.addEventListener('click', () => {
+			galeriaContenedor.style.display = 'none';
+		});
+		
+		//adelantar
+		const adelantarImg = () =>{
+			if(indiceImagen === galeria.length -1){
+				indiceImagen = -1;
+			}
+			imagenAct.src = galeria[indiceImagen + 1].src;
+			indiceImagen++;
+			textoImagen(indiceImagen);
+			
+		}
+		btnSiguiente.addEventListener('click',adelantarImg);
+
+		//retroceder
+		const retrocederImg = () =>{
+			if(indiceImagen === 0){
+				indiceImagen = galeria.length;
+			}
+			imagenAct.src = galeria[indiceImagen - 1].src;
+			indiceImagen--;
+			textoImagen(indiceImagen);			
+		}
+		btnRetro.addEventListener('click',retrocederImg);
+
+
+		function textoImagen(e){
+			if(e === 0){
+				mensajeImg.textContent = "Personal calificado";
+			}else if(e === 1){
+				mensajeImg.textContent = "Limpieza externa Shopping";
+			}else if(e === 2){
+				mensajeImg.textContent = "Personal rascacielos frontal";
+			}else if(e === 3){
+				mensajeImg.textContent = "Personal rascacielos lateral";
+			}
+
+		}
+
+		// DOM 2
+
+		const enlaces = document.querySelectorAll(".div-lista ul li");
+		var divP = document.getElementById("divcont")
+		
+
+		for(let i = 0; i<enlaces.length;i++){
+			enlaces[i].addEventListener("mouseover",senalar);			
+			enlaces[i].addEventListener("mouseout",dessenalar);							
+		}
+
+		
+
+		function senalar(e){			
+			while (divP.hasChildNodes()){
+				divP.removeChild(divP.firstChild);
+			}
+			var child = e.target.textContent;
+			var text;
+			var imagen;
+			if(child === "Limpieza de vidrios en altura."){
+				text = text1;		
+				imagen = "imagen/altura1.jpg"; 
+				datos(e,text,imagen);
+			}else if(child === "Limpieza de alucubond."){
+				text = text2;
+				imagen = "imagen/altura2.jpg"; 				
+				datos(e,text,imagen);
+			}else if(child === "Rehabilitación, restauración de fachadas en altura."){
+				text = text3;
+				imagen = "imagen/altura3.jpg"; 		
+				datos(e,text,imagen);			
+			}else if(child === "Colocación de publicidad en altura."){
+				text = text4;
+				imagen = "imagen/altura4.jpg"; 	
+				datos(e,text,imagen);					
+			}else{
+				dessenalar(e);
+			}	
+			
+		}
+
+		function datos (e,sms,imagen){	
+							
+			var nodoImg = document.createElement("img");
+			var nodoParrafo = document.createElement("p");
+			var div2 = document.createElement("div");
+
+			nodoParrafo.textContent = sms;
+			nodoParrafo.style.fontSize = "24px";
+			nodoImg.src = imagen;	
+			nodoImg.style.padding = "20px";
+			nodoImg.style.width = "350px";
+			nodoImg.style.height = "350px";
+			nodoImg.style.borderRadius = "10px";
+
+
+
+			divP.style.visibility = "visible";
+			divP.style.border = "1px solid #cccccc";
+
+			divP.appendChild(nodoImg);
+			div2.appendChild(nodoParrafo);					
+			divP.appendChild(div2);					
+			
+		}
+	
+		function dessenalar(e){										
+			while (divP.hasChildNodes()){
+				divP.removeChild(divP.firstChild);
+			}								
+			
+			var h = document.createElement("h1");				
+			h.textContent = "CONTAMOS CON LOS MEJORES SERVICIOS";
+			h.style.margin = "auto";
+			h.style.width = "30%";
+			h.style.padding = "25px";
+			h.style.border = "solid 1px blue";
+			h.style.borderRadius = "10px";
+			h.style.boxShadow = "0 0 15px black";
+			divP.appendChild(h);
+			
+			var img = document.createElement("img");
+			img.src = "https://www.climprofesional.com/blog/wp-content/uploads/2017/03/trabajo-en-altura-limpieza-de-cristales.gif";
+			img.style.margin = "auto";
+			img.style.width = "50%";			
+			img.style.height = "350px";			
+			img.style.padding = "24px";			
+			divP.appendChild(img);
+
+		}
+
+		var text1 = "Si ha pensado en realizar cualquiera de estos servicios por su cuenta, ha de saber que puede alquilar el material y maquinaria necesario para realizar el trabajo, pero ha de saber que se trata de una actividad de riesgo con peligros sobre la que existen y se han de tener en cuenta una serie de normas sobre seguridad y prevención de riesgos laborales.";
+		var text2 = "Nos hemos especializado en la limpieza de Alucobond, ofreciendo a nuestros clientes un servicio con la calidad extraordinaria que siempre ofrecemos, con garantías y a un precio sorprendente. Contamos con soluciones cada vez más especializadas y específicas para cada necesidad.";
+		var text3 = "La rehabilitación de fachadas es una necesidad periódica para la gran mayoría de nuestros inmuebles. Hasta tiempos muy recientes se optaba mayoritariamente entre dos soluciones, la primera consistía en reparar los enfoscados mediante morteros de cemento para posteriormente pintar la fachada cada cierto numero de años.";
+		var text4 = "Instalamos anclajes para colgar diferentes elementos en altura o zonas de difícil acceso: estructuras, carteles, pancartas o banners, lonas gran formato, banderolas y venecianas, sistemas de iluminación, sonido, pantallas de video, personas y altas cargas, según estudio previo realizados por la ingeniería.";		
+	</script>
+
+
+	
+</html>

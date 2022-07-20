@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Aquí puedes elegir cuál de los 6 servicios deseas, además de ello se debe introducir los campos indicados.">
+	<meta name="author" content="Ruben Vera Parraga"><title>Solicitud</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/proyecto.css?1">	
+	<link rel="stylesheet" type="text/css" href="../CSS/formulario.css?1">	
+</head>
+<body>
+	<div class="contenedor">
+		<header>
+                <div class="encabezado-logo-titulo">
+                    <div class="encabezado-ls">
+                        <img src="../imagen/grupo4.png" alt="logo" width="120" height="110">
+                    </div>
+                    <div class="encabezado-ls2">
+                        <h1 style="text-align: right;font-size: 50px;padding: 30px 40px;">SERVICIOS DE LIMPIEZA</h1>
+                    </div>
+                </div>            
+                <nav>
+                    <ul class="lista-ls">
+                        <li><a href="../presentacion.html">Inicio</a></li>
+                        <li><a href="#">Servicios</a>
+                            <ul class="lista-ls2">
+                                <li><a href="../VeraRuben.html">Limpieza en alturas</a></li>
+                                <li><a href="../CañarteIsabel.html">Clean express</a></li>
+                                <li><a href="../VillotaKendrick.html">Desinfección hospitalaria</a></li>
+                                <li><a href="../SanchezAndy.html">Clean working</a></li>
+                                <li><a href="../SellanLuis.html">Limpieza inteligente institucional</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="solititudservicios.html">Solicitud de Servicios</a></li>
+                        <li><a href="reclamo.html">Reclamo</a></li>
+                        <li><a href="contratamos.html">Trabaja con nosotros</a></li>
+                        <li><a href="comentarios.html">Comentarios</a></li>
+                        <li><a href="contactanos.html">Contáctanos</a></li>                    
+                    </ul>
+                </nav>           
+            </header>
+
+            <br><br>
+            <main>
+            	<div class="titulo-form">
+            		<h1>Solicitud de Servicio de Limpieza</h1>
+            	</div><br><br>
+            	<div class="formulario">
+
+	            	<form id="Solicitud" onsubmit="return validar()" onreset="limpiar()">	            
+		            	<div class="Nombres">
+	                        <label>Nombres:</label>
+	                        <input type="text" name="nombres" id="nombres" class="formItem" placeholder="Ingrese aquí su nombre"/>	                    
+	                        <label>Apellidos:</label>
+	                        <input type="text" name="apellidos" id="apellidos" class="formItem" placeholder="Ingrese aquí su apellido"/>
+	                    </div>	  
+	                    <div class="Nombres2">
+	                    	
+	                    </div><br>          
+	                    <div>
+	                        <label>Telefono:</label>
+	                        <input type="text" name="telefono" id="telefono" class="formItem" placeholder="Ingrese aquí su número telefónico"/>
+	                        
+	                    </div><br>
+	                    <div>
+	                        <label>Email:</label>
+	                        <input type="text" name="correo" id="correo" class="formItem" placeholder="Ingrese aquí su correo electrónico"/>
+
+	                    </div><br>
+	                    <div>
+	                        <label>Dirección:</label>
+	                        <input type="text" name="direccion" id="direccion" class="formItem" placeholder="Ingrese aquí su dirección"/>
+
+	                    </div><br>
+						<div>
+		                    <label>Servicio:</label>
+			            	<select id="servicio">	            		            	
+			            	  <option value="0">Seleccione</option>
+							  <option value="1">Limpieza en alturas</option>
+							  <option value="2">Clean express</option>
+							  <option value="3">Desinfección Hospitalaria</option>
+							  <option value="4">Clean Working</option>
+							  <option value="5">Limpieza Inteligente Institucional</option>
+							</select>
+
+			            </div><br>
+			            <div>
+			            	<label class="sms">Mensaje:</label>
+							<textarea id="mensaje1" style="resize:none;" placeholder="Escriba su mensaje"></textarea>
+
+			            </div><br>
+			            <div class="check">
+	                        <label>Desea recibir notificaciones a su correo?:</label>
+	                        <input type="checkbox" name="recibir" value="1" id="recibir"
+	                            class="formItem sus principal" />	                        
+	                    </div>
+	                    <br>
+
+		            <div>
+	                        <label>Fecha del Servicio:</label>
+	                        <input type="date" name="fecha" id="fecha" class="formItem" />
+
+	                    </div>
+	                    <div class="botones">
+	                        <input type="submit" class="btn btn-primary" value="Enviar">
+	                        <input type="reset" class="btn btn-primary" value="Limpiar">                        
+	                    </div>
+		            </form>
+
+
+		            <div class="imagen">
+		            	<br><br>
+		            	<img src="https://us.123rf.com/450wm/vectorkif/vectorkif1905/vectorkif190500050/123502141-el-hombre-de-limpieza-sostiene-la-escobilla-de-goma-y-la-mujer-sostiene-la-aspiradora-personajes-de-.jpg?ver=6" alt="">
+		            </div>
+		        </div>
+
+
+
+	        </main>
+	        <br><br><br><br>
+	        <footer>
+			<div id="pie">
+			<p><em style="color: white;">Vera Parraga Ruben</em></p>
+			<a href="mailton:ruben.verap@ug.edu.ec" style="color: #FFFFFF;">ruben.verap@ug.edu.ec</a><br>									
+			<p style="color: #FFFFFF;">Copyright &copy; 2022-2023 </p>
+			</div>
+		</footer>
+
+		</div>
+
+		<script >
+
+			function validar() {
+     // variable para retornar
+		    var valido = true;
+		     // obtencion de los elementos a validar
+		    var txtNombres = document.getElementById("nombres");
+		    var txtApellidos = document.getElementById("apellidos");
+		    var txtTelefono = document.getElementById("telefono");
+		    var selectServicio = document.getElementById("servicio");		    		    
+		    var txtfecha = document.getElementById("fecha");
+		    var txtemail = document.getElementById("correo");
+		    var txtdireccion = document.getElementById("direccion");
+		    var txtmensaje = document.getElementById("mensaje1");
+
+
+
+		    var letra = /^[a-z ,.'-]+$/i;// letrasyespacio   ///^[A-Z]+$/i;// solo letras
+    		var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    		var telefonoreg = /^[0-9]{10}$/g; // para validar datos que deban tener 10 numeros
+    		limpiar();
+    		//Validar nombres
+    		if (txtNombres.value === "" || txtApellidos.value === "") {    			
+		        valido = false;
+		        mensaje("Nombre y Apellido son requeridos", txtNombres);
+		    } else if (!letra.test(txtNombres.value) || !letra.test(txtApellidos.value)) { 
+		        valido = false;
+		        mensaje("Nombre y Apellido solo deben contener letras", txtNombres);
+		    } else if (txtNombres.value.length > 20 || txtApellidos.value.length > 20) {
+		        valido = false;
+		        mensaje("Nombre y Apellido deben tener maximo 20 caracteres", txtNombres);
+		    }
+
+		   
+
+		    		//validacion telefono
+		    if (txtTelefono.value === "") {
+		        valido = false;
+		        mensaje("Telefono es requerido", txtTelefono);
+		    } else if (!telefonoreg.test(txtTelefono.value)) {
+		        valido = false;
+		        mensaje("Telefono debe ser de 10 digitos", txtTelefono);
+		    }
+
+		    //validacion email
+		    if (txtemail.value === "") {
+		        valido = false;
+		        mensaje("Email es requerido", txtemail);
+		    } else if (!correo.test(txtemail.value)) {
+		        valido = false;
+		        mensaje("Email no es correcto", txtemail);
+		    }
+
+    		//validacion dirección
+    		if (txtdireccion.value === "") {
+		        valido = false;
+		        mensaje("Dirección es requerido", txtdireccion);
+		    } else if (txtdireccion.value.length > 20) {
+		        valido = false;
+		        mensaje("Dirección maximo 40 caracteres", txtdireccion);
+		    }
+
+		    //Validar Servicio
+		    if (selectServicio.value === '0') {
+		        valido = false;
+		        mensaje("Debe seleccionar un servicio", selectServicio);
+		    }
+
+		    if (txtmensaje.value === "") {
+		        valido = false;
+		        mensaje("Mensaje es requerido", txtmensaje);
+		    }
+
+
+		    var dato=  txtfecha.value;
+		    var fechaN = new Date(dato);
+		    var fechaActual = new Date();// fecha actual   
+		    
+		    if(dato===""){
+		    	mensaje("Fecha es requerido",txtfecha);
+		    }
+		    else if(fechaN < fechaActual){
+		        valido = false;
+		        mensaje("Fecha no puede ser inferior o igual a la actual",txtfecha);
+		   	}
+
+		   	if(valido == true){
+				window.alert("Su servicio será atendido");		   		
+		   	}
+		   	return valido;
+
+		}
+
+
+		function mensaje(cadenaMensaje, elemento) {
+		    elemento.focus();		    
+		    if(elemento.id == "nombres" || elemento.id == "apellidos"){
+		    	var nodoPadre = elemento.parentNode.parentNode;
+		    	var child = nodoPadre.children[1];
+			    var nodoMensaje = document.createElement("span");
+			    nodoMensaje.innerHTML = cadenaMensaje;
+			    nodoMensaje.style.color = "red";
+			    nodoMensaje.display = "block";
+			    nodoMensaje.setAttribute("class", "mensaje");
+			    child.appendChild(nodoMensaje);
+		    	
+		    }
+		    else{
+			    var nodoPadre = elemento.parentNode;
+			    var nodoMensaje = document.createElement("span");
+			    nodoMensaje.innerHTML = cadenaMensaje;
+			    nodoMensaje.style.color = "red";
+			    nodoMensaje.display = "block";
+			    nodoMensaje.setAttribute("class", "mensaje");
+			    nodoPadre.appendChild(nodoMensaje);
+		    }		    
+
+		}
+		function limpiar() {
+			var mensajes = document.querySelectorAll(".mensaje");
+			for (let i = 0; i < mensajes.length; i++) {
+			    mensajes[i].remove();// remueve o elimina un elemento de mi doc html
+			}
+		}
+
+		</script>
+
+</body>
+</html>

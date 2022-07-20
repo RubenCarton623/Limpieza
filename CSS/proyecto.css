@@ -1,0 +1,142 @@
+*{
+			margin:0;
+			padding:0;
+			font-family: Times New Roman;
+
+		}
+		body{
+			background: #19283D;
+			
+		}	
+		.contenedor{
+			margin: auto;
+			width: 80%;
+			background: #D8D8D8;
+			box-shadow: 0 0 50px black;
+		}
+
+header{
+    padding-bottom: 10px;
+    border-bottom: 5px solid #19284C;
+    background: #E2E9F2;
+
+}
+            
+.encabezado-logo-titulo{
+    display: flex;
+    height: 110px; 
+}         
+
+.encabezado-logo-titulo .encabezado-ls p{
+    text-align: right;
+    
+}
+            
+.encabezado-ls img{
+
+    text-align: left;
+}
+
+.encabezado-ls{
+    text-align: right;        
+}
+            
+.encabezado-ls p{
+    font-size: 50px;
+    font-weight: lighter;
+    color: blue;
+    text-align: right;             
+}
+.encabezado-logo-titulo {
+   display: flex;             
+   justify-content: center;
+}
+
+.lista-ls{
+    list-style: none;
+    display: flex;
+    padding: 10px;
+
+    background:#19284C;
+    width: 90%;    
+    margin: auto;
+    justify-content: center;
+}
+            
+.lista-ls2{
+    list-style: none;
+    padding: 0;
+    background:#00006B;    
+}            
+.lista-ls li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    font-size: 18.5px;
+    background:#19285A;
+    border: 1px solid gray;         	
+}
+            
+.lista-ls > li{
+    display: inline-block;
+    
+}
+
+            
+.lista-ls li a:hover{
+    background:#000;	 
+}
+
+.lista-ls li ul{	
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+
+.lista-ls li:hover > ul{
+	display: block;
+	background: none;
+	padding: 8px;
+
+}
+
+.caja:nth-child(4):hover{
+			background-color: #B0A8CD;
+		}
+		.caja:nth-child(5):hover{
+			background-color: #B0A8CD;
+		}
+
+		h2[title]{
+			color: darkblue;
+		}
+
+		dl {
+		    margin-bottom:10px;
+		}
+		dl dt {
+		    background:#43429F;
+		    color:#fff;
+		    font-weight:bold; 
+		    padding:5px;
+		    text-align: center;
+		    font-size: 18px;
+		    width:auto;
+		}
+		dl dd {
+		    margin:2px 0; 
+		    padding:5px 0;
+		}
+
+			#pie{
+				border: 1px solid blueviolet;
+				border-radius: 4px;
+				padding: 15px;
+				margin: auto;
+				width: 80%;
+				background-color: #2A297F;
+				
+				text-align: center;
+				width: 96.2%
+			}
